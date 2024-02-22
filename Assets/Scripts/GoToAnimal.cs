@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GoToAnimal : MonoBehaviour
 {
+    public string foxView;
+    public string goatView;
+
     private float touchArea = 0.1f;
 
 
@@ -25,10 +28,18 @@ public class GoToAnimal : MonoBehaviour
                 // Tarkista, onko kosketus osunut tähän GameObjectiin (eläimeen)
                 Collider2D osuttuCollider = Physics2D.OverlapPoint(kosketusSijainti);
 
-                if (osuttuCollider != null && osuttuCollider.CompareTag("Animal"))
+                if (osuttuCollider != null)
                 {
-                    // Lataa seuraava scene
-                    SceneManager.LoadScene("Forest_animal_view");
+                    if (osuttuCollider.CompareTag("Fox"))
+                    {
+                        SceneManager.LoadScene(foxView);
+                    }
+
+                    else if (osuttuCollider.CompareTag("Goat"))
+                    {
+                        SceneManager.LoadScene(goatView);
+                    }
+
                 }
             }
         }
