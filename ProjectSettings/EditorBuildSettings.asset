@@ -5,8 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 3fc8acdd13e6c734bafef6554d6fdbcd
+  - enabled: 1
+    path: Assets/Scenes/Forest_biome.unity
+    guid: c78c1929e519f7f4daf31aaf2c884f5d
+  - enabled: 1
+    path: Assets/Scenes/Forest_animal_view.unity
+    guid: 79498ec5f862a0d4b8d7088024d96e1a
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 547277402cb7a7241865fdb556841dfa, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5cec8ad4f14087a4cb6b5356de99ed1b, type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: be5713eabf9585e47a809b7c641987a6, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 7e820f2911b4aca43aad081f20f55d9f, type: 2}

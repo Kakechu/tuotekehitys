@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "com.spoiledcat.git": "1.0.18",
+    "com.unity.adaptiveperformance.google.android": "1.2.1",
+    "com.unity.adaptiveperformance.samsung.android": "5.0.0",
     "com.unity.collab-proxy": "2.2.0",
+    "com.unity.device-simulator.devices": "1.0.0",
     "com.unity.feature.2d": "2.0.0",
     "com.unity.feature.mobile": "1.0.0",
     "com.unity.ide.rider": "3.0.27",
