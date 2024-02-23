@@ -621,8 +621,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32665fe75f3f49848922da4545ef09f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foxView: 
-  goatView: 
+  foxView: foxView
+  goatView: goatView
 --- !u!61 &1472480332
 BoxCollider2D:
   m_ObjectHideFlags: 0
