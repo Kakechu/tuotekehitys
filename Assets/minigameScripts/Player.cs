@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Player : MonoBehaviour
 {
-    //mreference to player's speed
+    //reference to player's speed
     public float moveSpeed;
     // reference to rigidbody of player
     Rigidbody2D rigidBody;
+    // tracking collectables
+    public int collectCount = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +54,13 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("Minigame");
         }
+
+        if (collision.gameObject.tag == "Collectible")
+        {
+            Destroy(collision.gameObject);
+            collectCount++;
+        }
+
     }
 }
 

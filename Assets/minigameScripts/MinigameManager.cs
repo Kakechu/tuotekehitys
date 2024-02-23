@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour
 
             // removes "tap to start" text when game starts
             //startText.SetActive(false);
+
         }
 
 
@@ -127,7 +128,10 @@ public class GameManager : MonoBehaviour
 
     }
 
-
+    private void SpawnCollectible()
+    {
+        
+    }
 
 }
 
