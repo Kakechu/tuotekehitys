@@ -791,11 +791,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 8686636434037665705, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
+  collectible: {fileID: 4805823454734147448, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
   maxX: 2
   spawnPoint: {fileID: 1287281735}
-  spawnRate: 1
+  spawnRateObstacle: 1
+  spawnRateCollectible: 2
   scoreText: {fileID: 160542286}
   highScoreText: {fileID: 2017796328}
+  collectibleScoreText: {fileID: 1782354805}
 --- !u!1 &1354172693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,13 +1398,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1346653061274830946, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
+      propertyPath: m_Size.x
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346653061274830946, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
+      propertyPath: m_Size.y
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1346653061274830946, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4f23b82d18606b4584bf3cd8183c27b, type: 3}
+    - target: {fileID: 1346653061274830946, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4032899669602938610, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6238
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4032899669602938610, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.16
+      value: 5.56
       objectReference: {fileID: 0}
     - target: {fileID: 4032899669602938610, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1438,6 +1457,10 @@ PrefabInstance:
     - target: {fileID: 4805823454734147448, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
       propertyPath: m_Name
       value: Heart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805823454734147448, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
