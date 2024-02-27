@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     // reference to rigidbody of player
     Rigidbody2D rigidBody;
     // tracking collectables
-    public int collectCount = 0;
+    public int collectCount;
 
     // Start is called before the first frame update
     void Start()
@@ -50,17 +50,25 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
+
+        //Debug.Log(collision.gameObject.tag);
+
         if (collision.gameObject.tag == "Obstacle")
         {
+            Debug.Log(collision.gameObject.tag);
             SceneManager.LoadScene("Minigame");
         }
 
         if (collision.gameObject.tag == "Collectible")
         {
+            Debug.Log(collision.gameObject.tag);
             Destroy(collision.gameObject);
-            collectCount++;
+            //collectCount++;
+            //Debug.Log(collision.gameObject.name);
         }
 
     }
+
 }
 
