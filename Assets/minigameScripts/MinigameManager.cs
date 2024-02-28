@@ -73,6 +73,7 @@ public class GameManager : MonoBehaviour
 
             gameStarted = true;
 
+
             // removes "tap to start" text when game starts
             //startText.SetActive(false);
 
@@ -152,6 +153,12 @@ public class GameManager : MonoBehaviour
         Instantiate(collectible, spawnPos, Quaternion.identity);
 
     }
+
+
+
+
+
+
 
 }
 
