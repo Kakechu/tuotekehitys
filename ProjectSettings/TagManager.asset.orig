@@ -4,13 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Animal
   - Fox
   - Goat
   - Back
+=======
   - Obstacle
   - Collectible
-  - PlayMiniGame
+>>>>>>> 7335239e236812b85a5ea82045477cbbabfb6100
   layers:
   - Default
   - TransparentFX
