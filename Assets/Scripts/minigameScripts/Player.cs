@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class Player : MonoBehaviour
 {
-    //mreference to player's speed
+    //reference to player's speed
     public float moveSpeed;
     // reference to rigidbody of player
     Rigidbody2D rigidBody;
+    // tracking collectables
+    public int collectCount;
 
     // Start is called before the first frame update
     void Start()
@@ -45,16 +48,27 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collisionObstacle)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collisionObstacle.gameObject.tag == "Obstacle")
+
+
+        //Debug.Log(collision.gameObject.tag);
+
+        if (collision.gameObject.tag == "Obstacle")
         {
+            Debug.Log(collision.gameObject.tag);
             SceneManager.LoadScene("Minigame");
         }
+
+        if (collision.gameObject.tag == "Collectible")
+        {
+            Debug.Log(collision.gameObject.tag);
+            Destroy(collision.gameObject);
+            //collectCount++;
+            //Debug.Log(collision.gameObject.name);
+        }
+
     }
-
-    
-
 
 }
 
