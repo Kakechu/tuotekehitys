@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToNextBiome : MonoBehaviour
+public class NextBiome : MonoBehaviour
 {
     public float swipeThreshold = 50f;
 
