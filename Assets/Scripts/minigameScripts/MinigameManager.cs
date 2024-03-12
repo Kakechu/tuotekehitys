@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
 
         collectibleScoreText.text = "Hearts: " + "heart count here";
 
-        minigameMenu.SetActive(false);
+       
     }
 
 
@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
 
             // removes "tap to start" text when game starts
             //startText.SetActive(false);
+            minigameMenu.SetActive(false);
 
         }
 
