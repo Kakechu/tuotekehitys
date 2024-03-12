@@ -22,7 +22,7 @@ public class GoToAnimal : MonoBehaviour
             // Tarkista, onko kosketus liian lyhyt (klikkaus)
             if (kosketus.phase == TouchPhase.Began && kosketus.deltaTime < touchArea)
             {
-                // Määritä sormen sijainti maailmatilassa
+                // Määritä sormen sijainti
                 Vector3 kosketusSijainti = Camera.main.ScreenToWorldPoint(kosketus.position);
 
                 // Tarkista, onko kosketus osunut tähän GameObjectiin (eläimeen)
@@ -32,12 +32,12 @@ public class GoToAnimal : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("Fox"))
                     {
-                        SceneManager.LoadScene(foxView);
+                        SceneManager.LoadScene("foxView");
                     }
 
                     else if (osuttuCollider.CompareTag("Goat"))
                     {
-                        SceneManager.LoadScene(goatView);
+                        SceneManager.LoadScene("goatView");
                     }
 
                 }

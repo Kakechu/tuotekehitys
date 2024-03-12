@@ -22,7 +22,7 @@ public class BackToBiome : MonoBehaviour
             // Tarkista, onko kosketus liian lyhyt (klikkaus)
             if (kosketus.phase == TouchPhase.Began && kosketus.deltaTime < touchArea)
             {
-                // Määritä sormen sijainti maailmatilassa
+                // Määritä sormen sijainti
                 Vector3 kosketusSijainti = Camera.main.ScreenToWorldPoint(kosketus.position);
 
                 // Tarkista, onko kosketus osunut tähän GameObjectiin (eläimeen)
