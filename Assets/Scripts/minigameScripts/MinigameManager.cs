@@ -3,19 +3,24 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
     // VARIABLES:
 
-    // reference to Heart Object
+    // reference to Obstacle Object
     public GameObject obstacle;
-    // x coordinate limit to which heart can be spawned
+    // reference to Collectible Object
+    public GameObject collectible;
+    // x coordinate limit to which falling objects can be spawned
     public float maxX;
     // reference to Spawn Point
     public Transform spawnPoint;
-    // how often Heart Objects are spawned
-    public float spawnRate;
+    // how often obstacles are spawned
+    public float spawnRateObstacle;
+    // how often collectibles are spawned
+    public float spawnRateCollectible;
     //float spawnRate = 1.0f;
 
     bool gameStarted = false;
@@ -27,13 +32,18 @@ public class GameManager : MonoBehaviour
     // variable for score
     int score = 0;
     // variable for time passed
-    float timePassed = 0f;
+    //float timePassed = 0f;
     // highscore
     public TextMeshProUGUI highScoreText;
+    // collectible counter
+    public TextMeshProUGUI collectibleScoreText;
+
 
     void Start()
     {
         highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
+
+        collectibleScoreText.text = "Hearts: " + "heart count here";
     }
 
 
@@ -44,7 +54,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !gameStarted)
         {
             // adding seconds to timer
-            timePassed += Time.deltaTime;
+            //timePassed += Time.deltaTime;
 
             // spawnauksen nopeutus
             // EI TOIMI !!!!! mut miksiiii :(
@@ -58,13 +68,15 @@ public class GameManager : MonoBehaviour
             //timePassed = 0f;
             //}
 
-            //starts spawning hearts
+            //starts spawning falling objects
             StartSpawning();
 
             gameStarted = true;
 
+
             // removes "tap to start" text when game starts
             //startText.SetActive(false);
+
         }
 
 
@@ -84,17 +96,19 @@ public class GameManager : MonoBehaviour
         //}
 
         // EI TOIMI :(
-        if (timePassed > 5f)
-        {
-            // make spawnRate smaller?
-            spawnRate = 0.3f;
+        //if (timePassed > 5f)
+        //{
+        // make spawnRate smaller?
+        //  spawnRate = 0.3f;
 
-            // resetting the timer
-            timePassed = 0f;
-        }
+        // resetting the timer
+        //timePassed = 0f;
+        //}
 
+        InvokeRepeating("SpawnObstacle", 0.5f, spawnRateObstacle);
 
-        InvokeRepeating("SpawnObstacle", 0.5f, spawnRate);
+        InvokeRepeating("SpawnCollectible", 1.0f, spawnRateCollectible);
+
     }
 
     private void SpawnObstacle()
@@ -106,7 +120,7 @@ public class GameManager : MonoBehaviour
         // creating a random x position for spawn position
         spawnPos.x = Random.Range(-maxX, maxX);
 
-        // instantiating the heart at the random spawn position
+        // instantiating the obstacle at the random spawn position
         // Instantiate(object, position, rotation)
         // default rotation = Quaternion.identity, because we don't need any external rotations
         Instantiate(obstacle, spawnPos, Quaternion.identity);
@@ -127,7 +141,23 @@ public class GameManager : MonoBehaviour
 
     }
 
+    private void SpawnCollectible()
+    {
+        // creating a spawn position
+        Vector3 spawnPos = spawnPoint.position;
+
+        // creating a random x position for spawn position
+        spawnPos.x = Random.Range(-maxX, maxX);
+
+        // instantiating the collectible at the random spawn position
+        Instantiate(collectible, spawnPos, Quaternion.identity);
+
+    }
+
+
+
+
+
 
 
 }
-
