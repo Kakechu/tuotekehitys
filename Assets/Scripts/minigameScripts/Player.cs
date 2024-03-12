@@ -45,12 +45,16 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collisionObstacle)
     {
-        if (collision.gameObject.tag == "Obstacle")
+        if (collisionObstacle.gameObject.tag == "Obstacle")
         {
             SceneManager.LoadScene("Minigame");
         }
     }
+
+    
+
+
 }
 
