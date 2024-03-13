@@ -11,6 +11,8 @@ TagManager:
   - Obstacle
   - Collectible
   - PlayMiniGame
+  - backFromMinigame
+  - startMinigame
   layers:
   - Default
   - TransparentFX
