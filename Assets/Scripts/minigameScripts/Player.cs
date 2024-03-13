@@ -64,7 +64,8 @@ public class Player : MonoBehaviour
         {
             Debug.Log(collision.gameObject.tag);
             Destroy(collision.gameObject);
-            //collectCount++;
+            collectCount++;
+            Debug.Log(collectCount);
             //Debug.Log(collision.gameObject.name);
         }
 
