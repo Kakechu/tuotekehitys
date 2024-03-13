@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
@@ -40,6 +41,8 @@ public class GameManager : MonoBehaviour
     // menu
     public GameObject minigameMenu;
 
+    //Minipelimenua
+    private float touchArea = 0.1f;
 
 
     void Start()
@@ -56,36 +59,44 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // when screen is clicked for the first time, game starts
-        if (Input.GetMouseButtonDown(0) && !gameStarted)
+
+        //Tästä alkaa testi
+        if (Input.touchCount > 0)
         {
-            // adding seconds to timer
-            //timePassed += Time.deltaTime;
+            // Otetaan ensimmäinen kosketus
+            Touch kosketus = Input.GetTouch(0);
 
-            // spawnauksen nopeutus
-            // EI TOIMI !!!!! mut miksiiii :(
-            //if(timePassed > 5f)
-            //{
-            // make spawnRate smaller?
-            //spawnRate = spawnRate * 0.5f;
+            // Tarkista, onko kosketus liian lyhyt (klikkaus)
+            if (kosketus.phase == TouchPhase.Began && kosketus.deltaTime < touchArea)
+            {
+                // Määritä sormen sijainti
+                Vector3 kosketusSijainti = Camera.main.ScreenToWorldPoint(kosketus.position);
 
+                // Tarkista, onko kosketus osunut tähän GameObjectiin (eläimeen)
+                Collider2D osuttuCollider = Physics2D.OverlapPoint(kosketusSijainti);
 
-            // resetting the timer
-            //timePassed = 0f;
-            //}
+                if (osuttuCollider != null)
+                {
+                    if (osuttuCollider.CompareTag("startMinigame") && !gameStarted)
+                    {
+                   
+                        //starts spawning falling objects
+                        StartSpawning();
 
-            //starts spawning falling objects
-            StartSpawning();
+                        gameStarted = true;
 
-            gameStarted = true;
+                        //removes the menu
+                        minigameMenu.SetActive(false);
+                    }
 
+                    else if (osuttuCollider.CompareTag("Back"))
+                    {
+                        SceneManager.LoadScene("foxView");
+                    }
 
-            // removes "tap to start" text when game starts
-            //startText.SetActive(false);
-            minigameMenu.SetActive(false);
-
+                }
+            }
         }
-
-
     }
 
     // OBSTACLE SPAWNER
