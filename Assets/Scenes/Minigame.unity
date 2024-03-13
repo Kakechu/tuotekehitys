@@ -496,7 +496,7 @@ GameObject:
   - component: {fileID: 718352195}
   m_Layer: 0
   m_Name: START
-  m_TagString: Untagged
+  m_TagString: startMinigame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1134,8 +1134,8 @@ MonoBehaviour:
   collectible: {fileID: 4805823454734147448, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
   maxX: 2
   spawnPoint: {fileID: 1287281735}
-  spawnRateObstacle: 1
-  spawnRateCollectible: 2
+  spawnRateObstacle: 2
+  spawnRateCollectible: 3
   scoreText: {fileID: 160542286}
   highScoreText: {fileID: 2017796328}
   collectibleScoreText: {fileID: 674092494}
@@ -1311,7 +1311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e3075a404bb42a1903cce92e6e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
+  moveSpeed: 15
   collectCount: 0
 --- !u!1 &1772643524
 GameObject:
@@ -1400,9 +1400,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1820449433}
   - component: {fileID: 1820449434}
+  - component: {fileID: 1820449435}
   m_Layer: 0
   m_Name: BACK
-  m_TagString: Untagged
+  m_TagString: Back
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1474,6 +1475,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1820449435
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820449432}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000011920929, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.0999999
 --- !u!1 &2017796326
 GameObject:
   m_ObjectHideFlags: 0
@@ -1616,6 +1652,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6239529662238835311, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.24025418
