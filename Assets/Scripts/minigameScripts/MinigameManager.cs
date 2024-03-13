@@ -77,21 +77,19 @@ public class GameManager : MonoBehaviour
 
                 if (osuttuCollider != null)
                 {
-                    if (osuttuCollider.CompareTag("startMinigame") && !gameStarted) //muuta tägi
+                    if (osuttuCollider.CompareTag("startMinigame") && !gameStarted)
                     {
-                        //SceneManager.LoadScene("foxView");
+                   
                         //starts spawning falling objects
                         StartSpawning();
 
                         gameStarted = true;
 
-
-                        // removes "tap to start" text when game starts
-                        //startText.SetActive(false);
+                        //removes the menu
                         minigameMenu.SetActive(false);
                     }
 
-                    else if (osuttuCollider.CompareTag("Back")) //tsekkaa tägi, lisää collider
+                    else if (osuttuCollider.CompareTag("Back"))
                     {
                         SceneManager.LoadScene("foxView");
                     }
@@ -99,43 +97,6 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
-        //tähän loppuu testi
-
-
-/*
-        if (Input.GetMouseButtonDown(0) && !gameStarted) //Tämä käynnistää pelin, voidaanko paikallistaa??
-        {
-
-
-            // adding seconds to timer
-            //timePassed += Time.deltaTime;
-
-            // spawnauksen nopeutus
-            // EI TOIMI !!!!! mut miksiiii :(
-            //if(timePassed > 5f)
-            //{
-            // make spawnRate smaller?
-            //spawnRate = spawnRate * 0.5f;
-
-
-            // resetting the timer
-            //timePassed = 0f;
-            //}
-
-            //starts spawning falling objects
-            StartSpawning();
-
-            gameStarted = true;
-
-
-            // removes "tap to start" text when game starts
-            //startText.SetActive(false);
-            minigameMenu.SetActive(false);
-
-        }
-*/
-
     }
 
     // OBSTACLE SPAWNER
