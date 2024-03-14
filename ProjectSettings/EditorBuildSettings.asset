@@ -12,14 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/squirrelView.unity
     guid: 79498ec5f862a0d4b8d7088024d96e1a
   - enabled: 1
-    path: Assets/Scenes/goatView.unity
-    guid: d618f7eedc3a5084892ecf6d0d3735c8
-  - enabled: 1
     path: Assets/Scenes/Minigame.unity
     guid: 0c199ff43e7513e4bba7e4da07f54c3b
   - enabled: 1
     path: Assets/Scenes/nextBiome.unity
     guid: 4735ccd404cce7547b73807b85774d20
+  - enabled: 1
+    path: Assets/Scenes/hedgehogView.unity
+    guid: 49b37cf454f99bd43a26607301b114a4
+  - enabled: 1
+    path: Assets/Scenes/bunnyView.unity
+    guid: 7453a57e41275524ca99787a4f4c2b46
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 547277402cb7a7241865fdb556841dfa, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5cec8ad4f14087a4cb6b5356de99ed1b, type: 2}

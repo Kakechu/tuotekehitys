@@ -35,11 +35,14 @@ public class GoToAnimal : MonoBehaviour
                         SceneManager.LoadScene("squirrelView");
                     }
 
-                    else if (osuttuCollider.CompareTag("Goat"))
+                    else if (osuttuCollider.CompareTag("Bunny"))
                     {
-                        SceneManager.LoadScene("goatView");
+                        SceneManager.LoadScene("bunnyView");
                     }
-
+                    else if (osuttuCollider.CompareTag("Hedgehog"))
+                    {
+                        SceneManager.LoadScene("hedgehogView");
+                    }
                 }
             }
         }
