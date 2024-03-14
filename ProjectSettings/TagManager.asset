@@ -13,6 +13,9 @@ TagManager:
   - PlayMiniGame
   - backFromMinigame
   - startMinigame
+  - Hedgehog
+  - Bunny
+  - Squirrel
   layers:
   - Default
   - TransparentFX

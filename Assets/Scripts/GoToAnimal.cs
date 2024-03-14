@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GoToAnimal : MonoBehaviour
 {
-    public string foxView;
-    public string goatView;
+    public string squirrelView;
+    public string bunnyView;
+    public string hedgehogView;
+
 
     private float touchArea = 0.1f;
 
@@ -30,14 +32,18 @@ public class GoToAnimal : MonoBehaviour
 
                 if (osuttuCollider != null)
                 {
-                    if (osuttuCollider.CompareTag("Fox"))
+                    if (osuttuCollider.CompareTag("Squirrel"))
                     {
-                        SceneManager.LoadScene("foxView");
+                        SceneManager.LoadScene("squirrelView");
                     }
 
-                    else if (osuttuCollider.CompareTag("Goat"))
+                    else if (osuttuCollider.CompareTag("Bunny"))
                     {
-                        SceneManager.LoadScene("goatView");
+                        SceneManager.LoadScene("bunnyView");
+                    }
+                    else if (osuttuCollider.CompareTag("Hedgehog"))
+                    {
+                        SceneManager.LoadScene("hedgehogView");
                     }
 
                 }
