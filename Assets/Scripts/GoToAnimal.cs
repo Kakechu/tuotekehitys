@@ -30,9 +30,9 @@ public class GoToAnimal : MonoBehaviour
 
                 if (osuttuCollider != null)
                 {
-                    if (osuttuCollider.CompareTag("Fox"))
+                    if (osuttuCollider.CompareTag("Squirrel"))
                     {
-                        SceneManager.LoadScene("foxView");
+                        SceneManager.LoadScene("squirrelView");
                     }
 
                     else if (osuttuCollider.CompareTag("Goat"))

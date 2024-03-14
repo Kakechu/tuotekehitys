@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 
                     else if (osuttuCollider.CompareTag("Back"))
                     {
-                        SceneManager.LoadScene("foxView");
+                        SceneManager.LoadScene("squirrelView");
                     }
 
                 }

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/forestView.unity
     guid: c78c1929e519f7f4daf31aaf2c884f5d
   - enabled: 1
-    path: Assets/Scenes/foxView.unity
+    path: Assets/Scenes/squirrelView.unity
     guid: 79498ec5f862a0d4b8d7088024d96e1a
   - enabled: 1
     path: Assets/Scenes/goatView.unity
