@@ -47,9 +47,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // high score text
         highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
-
-        //collectibleScoreText.text = "Hearts: " + "heart count here";
+        // score text
+        scoreText.text = "Score: " + score.ToString();
     }
 
 
@@ -83,6 +84,8 @@ public class GameManager : MonoBehaviour
 
                         //removes the menu
                         minigameMenu.SetActive(false);
+                        // makes high score text blank
+                        highScoreText.text = " ";
                     }
 
                     else if (osuttuCollider.CompareTag("Back"))
@@ -122,13 +125,13 @@ public class GameManager : MonoBehaviour
         // increments score value
         score++;
         // stores score value to scoreText (=the UI element) so it changes when needed
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
 
         // highscore
         if (score > PlayerPrefs.GetInt("highScore", 0))
         {
             PlayerPrefs.SetInt("highScore", score);
-            highScoreText.text = "Your record: " + score.ToString();
+            //highScoreText.text = "Your record: " + score.ToString();
         }
     }
 

@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
 
         // adding score text
-        collectibleScoreText.text = "Hearts: " + "heart count here";
+        collectibleScoreText.text = "Hearts: " + collectCount.ToString();
     }
 
     // Update is called once per frame
@@ -52,6 +52,9 @@ public class Player : MonoBehaviour
             // if not touching screen, velocity is zero
             rigidBody.velocity = Vector2.zero;
         }
+
+        // adding score text
+        collectibleScoreText.text = "Hearts: " + collectCount.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
