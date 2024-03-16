@@ -47,11 +47,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
+        //highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
 
-        collectibleScoreText.text = "Hearts: " + "heart count here";
-
-       
+        //collectibleScoreText.text = "Hearts: " + "heart count here";
     }
 
 
@@ -60,7 +58,6 @@ public class GameManager : MonoBehaviour
     {
         // when screen is clicked for the first time, game starts
 
-        //Tästä alkaa testi
         if (Input.touchCount > 0)
         {
             // Otetaan ensimmäinen kosketus
@@ -79,7 +76,6 @@ public class GameManager : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("startMinigame") && !gameStarted)
                     {
-                   
                         //starts spawning falling objects
                         StartSpawning();
 
@@ -99,38 +95,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // OBSTACLE SPAWNER
+    // SPAWNERS
 
     private void StartSpawning()
     {
-        // calls function again and again at a certain rate
-        // InvokeRepeating(function name, when it starts to call function, spawnrate)
-        //spawnRate = 0.3f;
-        // spawnrate 
-        //if (Time.time % 5 == 0)
-        //{
-        //    spawnRate = spawnRate * 0.5f;
-        //}
-
-        // EI TOIMI :(
-        //if (timePassed > 5f)
-        //{
-        // make spawnRate smaller?
-        //  spawnRate = 0.3f;
-
-        // resetting the timer
-        //timePassed = 0f;
-        //}
-
+        // makes obstacles
         InvokeRepeating("SpawnObstacle", 0.5f, spawnRateObstacle);
 
+        // makes collectibles
         InvokeRepeating("SpawnCollectible", 1.0f, spawnRateCollectible);
-
     }
 
     private void SpawnObstacle()
     {
-
         // creating a spawn position
         Vector3 spawnPos = spawnPoint.position;
 
@@ -153,9 +130,6 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("highScore", score);
             highScoreText.text = "Your record: " + score.ToString();
         }
-
-
-
     }
 
     private void SpawnCollectible()
@@ -168,13 +142,5 @@ public class GameManager : MonoBehaviour
 
         // instantiating the collectible at the random spawn position
         Instantiate(collectible, spawnPos, Quaternion.identity);
-
     }
-
-
-
-
-
-
-
 }
