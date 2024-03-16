@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
@@ -12,12 +13,17 @@ public class Player : MonoBehaviour
     Rigidbody2D rigidBody;
     // tracking collectables
     public int collectCount;
+    // collectible score tracker text
+    public TextMeshProUGUI collectibleScoreText;
 
     // Start is called before the first frame update
     void Start()
     {
         // getting access to rigidbody component
         rigidBody = GetComponent<Rigidbody2D>();
+
+        // adding score text
+        collectibleScoreText.text = "Hearts: " + "heart count here";
     }
 
     // Update is called once per frame
@@ -66,6 +72,7 @@ public class Player : MonoBehaviour
             Destroy(collision.gameObject);
             collectCount++;
             Debug.Log(collectCount);
+            collectibleScoreText.text = collectCount.ToString();
             //Debug.Log(collision.gameObject.name);
         }
 

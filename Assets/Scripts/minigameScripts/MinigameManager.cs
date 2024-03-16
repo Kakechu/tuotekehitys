@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     // highscore
     public TextMeshProUGUI highScoreText;
     // collectible counter
-    public TextMeshProUGUI collectibleScoreText;
+    //public TextMeshProUGUI collectibleScoreText;
     // menu
     public GameObject minigameMenu;
 
@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
+        highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
 
         //collectibleScoreText.text = "Hearts: " + "heart count here";
     }
