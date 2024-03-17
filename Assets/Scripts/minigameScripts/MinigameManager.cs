@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public float spawnRateCollectible;
     //float spawnRate = 1.0f;
 
-    bool gameStarted = false;
+    public static bool gameStarted = false;
 
     // reference to "tap to start text"
     //public GameObject startText;
