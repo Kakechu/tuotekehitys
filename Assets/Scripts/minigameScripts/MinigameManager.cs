@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public float spawnRateCollectible;
     //float spawnRate = 1.0f;
 
-    bool gameStarted = false;
+    public static bool gameStarted = false;
 
     // reference to "tap to start text"
     //public GameObject startText;
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     // highscore
     public TextMeshProUGUI highScoreText;
     // collectible counter
-    public TextMeshProUGUI collectibleScoreText;
+    //public TextMeshProUGUI collectibleScoreText;
     // menu
     public GameObject minigameMenu;
 
@@ -47,11 +47,10 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        // high score text
         highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
-
-        collectibleScoreText.text = "Hearts: " + "heart count here";
-
-       
+        // score text
+        scoreText.text = "Score: " + score.ToString();
     }
 
 
@@ -60,7 +59,6 @@ public class GameManager : MonoBehaviour
     {
         // when screen is clicked for the first time, game starts
 
-        //Tästä alkaa testi
         if (Input.touchCount > 0)
         {
             // Otetaan ensimmäinen kosketus
@@ -79,7 +77,6 @@ public class GameManager : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("startMinigame") && !gameStarted)
                     {
-                   
                         //starts spawning falling objects
                         StartSpawning();
 
@@ -87,6 +84,8 @@ public class GameManager : MonoBehaviour
 
                         //removes the menu
                         minigameMenu.SetActive(false);
+                        // makes high score text blank
+                        highScoreText.text = " ";
                     }
 
                     else if (osuttuCollider.CompareTag("Back"))
@@ -99,38 +98,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // OBSTACLE SPAWNER
+    // SPAWNERS
 
     private void StartSpawning()
     {
-        // calls function again and again at a certain rate
-        // InvokeRepeating(function name, when it starts to call function, spawnrate)
-        //spawnRate = 0.3f;
-        // spawnrate 
-        //if (Time.time % 5 == 0)
-        //{
-        //    spawnRate = spawnRate * 0.5f;
-        //}
-
-        // EI TOIMI :(
-        //if (timePassed > 5f)
-        //{
-        // make spawnRate smaller?
-        //  spawnRate = 0.3f;
-
-        // resetting the timer
-        //timePassed = 0f;
-        //}
-
+        // makes obstacles
         InvokeRepeating("SpawnObstacle", 0.5f, spawnRateObstacle);
 
+        // makes collectibles
         InvokeRepeating("SpawnCollectible", 1.0f, spawnRateCollectible);
-
     }
 
     private void SpawnObstacle()
     {
-
         // creating a spawn position
         Vector3 spawnPos = spawnPoint.position;
 
@@ -145,17 +125,14 @@ public class GameManager : MonoBehaviour
         // increments score value
         score++;
         // stores score value to scoreText (=the UI element) so it changes when needed
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
 
         // highscore
         if (score > PlayerPrefs.GetInt("highScore", 0))
         {
             PlayerPrefs.SetInt("highScore", score);
-            highScoreText.text = "Your record: " + score.ToString();
+            //highScoreText.text = "Your record: " + score.ToString();
         }
-
-
-
     }
 
     private void SpawnCollectible()
@@ -168,13 +145,5 @@ public class GameManager : MonoBehaviour
 
         // instantiating the collectible at the random spawn position
         Instantiate(collectible, spawnPos, Quaternion.identity);
-
     }
-
-
-
-
-
-
-
 }
