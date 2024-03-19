@@ -1652,29 +1652,49 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3104351114192930440, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ace2f735ee288e94c9cad925e0b3d515, type: 3}
+    - target: {fileID: 6209430472652190422, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8503141
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209430472652190422, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2582946
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209430472652190422, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0107495785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6209430472652190422, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.03561318
+      objectReference: {fileID: 0}
     - target: {fileID: 6239529662238835311, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_GravityScale
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.24025418
+      value: 0.062739186
       objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.24878074
+      value: 0.06496579
       objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.44409275
+      value: 0.11596892
       objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.165
+      value: -1.8988
       objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.605
+      value: 5.3293
       objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1710,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8686636434037665705, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_Name
-      value: Wood Log
+      value: Pinecone
       objectReference: {fileID: 0}
     - target: {fileID: 8686636434037665705, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_IsActive
@@ -1729,6 +1749,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1346653061274830946, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b2ce0a456e941e8488adf89ceba9c4b3, type: 3}
     - target: {fileID: 4032899669602938610, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.62
@@ -1771,7 +1795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4805823454734147448, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
       propertyPath: m_Name
-      value: Heart
+      value: Star
       objectReference: {fileID: 0}
     - target: {fileID: 4805823454734147448, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
       propertyPath: m_IsActive
