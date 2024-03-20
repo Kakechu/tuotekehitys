@@ -1134,7 +1134,7 @@ MonoBehaviour:
   collectible: {fileID: 4805823454734147448, guid: bc9c5c5109f44954081837f1f10af7d6, type: 3}
   maxX: 2
   spawnPoint: {fileID: 1287281735}
-  spawnRateObstacle: 2
+  spawnRateObstacle: 1.5
   spawnRateCollectible: 3
   scoreText: {fileID: 160542286}
   highScoreText: {fileID: 2017796328}
