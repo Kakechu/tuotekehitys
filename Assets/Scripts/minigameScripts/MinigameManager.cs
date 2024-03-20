@@ -84,6 +84,7 @@ public class GameManager : MonoBehaviour
 
                         //removes the menu
                         minigameMenu.SetActive(false);
+
                         // makes high score text blank
                         highScoreText.text = " ";
                     }

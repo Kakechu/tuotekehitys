@@ -35,7 +35,7 @@ public class Player : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
 
         // adding score text
-        collectibleScoreText.text = "Hearts: " + collectCount.ToString();
+        collectibleScoreText.text = "Stars: " + collectCount.ToString();
 
         // get script
         //MinigameManager script = gameObject.GetComponent<MinigameManager>();
@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             }
 
             // adding score text
-            collectibleScoreText.text = "Hearts: " + collectCount.ToString();
+            collectibleScoreText.text = "Stars: " + collectCount.ToString();
             }
     }
 
