@@ -17,6 +17,10 @@ public class Player : MonoBehaviour
     // collectible score tracker text
     public TextMeshProUGUI collectibleScoreText;
 
+    //lisäys
+
+    public GameObject cam;
+
     // MIKÄÄN EI TOIMIIIIII
     // get gamemanager script ?? maybe ??
     //public MinigameManager minigameScript;
@@ -87,6 +91,13 @@ public class Player : MonoBehaviour
             Debug.Log(collision.gameObject.tag);
             SceneManager.LoadScene("Minigame");
             GameManager.gameStarted = false;
+            //Tästä lähtee testi
+            //Money.moneyToAdd += collectCount;
+            //cam.GetComponent<Money>().addMoney(collectCount);
+
+            //Money.addMoney(Money.moneyToAdd);
+            //Debug.Log($"Now I have {cam.GetComponent<Money>()} moneys");
+            //Tähän päättyy testi
         }
 
         if (collision.gameObject.tag == "Collectible")
@@ -94,6 +105,13 @@ public class Player : MonoBehaviour
             Debug.Log(collision.gameObject.tag);
             Destroy(collision.gameObject);
             collectCount++;
+            MoneyManager.money += 1;
+            Debug.Log("money" + MoneyManager.money);
+            //testi
+
+            // cam.GetComponent<Money>().addMoney(1);
+            //testi
+
             Debug.Log(collectCount);
             collectibleScoreText.text = collectCount.ToString();
             //Debug.Log(collision.gameObject.name);

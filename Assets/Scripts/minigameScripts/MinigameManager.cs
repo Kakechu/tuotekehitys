@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     // menu
     public GameObject minigameMenu;
 
+
+
     //Minipelimenua
     private float touchArea = 0.1f;
 
