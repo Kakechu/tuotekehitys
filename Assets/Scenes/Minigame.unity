@@ -1313,6 +1313,7 @@ MonoBehaviour:
   moveSpeed: 15
   collectCount: 0
   collectibleScoreText: {fileID: 674092494}
+  cam: {fileID: 0}
 --- !u!1 &1772643524
 GameObject:
   m_ObjectHideFlags: 0
