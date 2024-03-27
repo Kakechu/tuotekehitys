@@ -26,10 +26,19 @@ public class MoneyManager : MonoBehaviour
     {
         moneyText.text = money.ToString();
         Debug.Log("money amount" + money);
-        //moneyText.text = "Money: " + money;
+        moneyText.text = "Money: " + money.ToString();
 
     }
-
+    /*
+    public void UpdateMoneyText()
+    {
+        if (moneyText != null)
+        {
+            moneyText.text = "Money: " + money.ToString();
+            Debug.Log("money amount" + money);
+        }
+    }
+    */
 
 
 
