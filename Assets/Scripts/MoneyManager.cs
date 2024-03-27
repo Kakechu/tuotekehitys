@@ -8,11 +8,9 @@ using TMPro;
 public class MoneyManager : MonoBehaviour
 {
     public static int money;
-    //public Text moneyText;
-    public TextMeshProUGUI moneyText;
 
     public static MoneyManager instance;
-    // scoreText.text = "Score: " + score.ToString();
+
 
     // Start is called before the first frame update
     void Start()
@@ -20,26 +18,6 @@ public class MoneyManager : MonoBehaviour
         money = 0;
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        moneyText.text = money.ToString();
-        Debug.Log("money amount" + money);
-        moneyText.text = "Money: " + money.ToString();
-
-    }
-    /*
-    public void UpdateMoneyText()
-    {
-        if (moneyText != null)
-        {
-            moneyText.text = "Money: " + money.ToString();
-            Debug.Log("money amount" + money);
-        }
-    }
-    */
-
 
 
     private void Awake()
@@ -49,10 +27,12 @@ public class MoneyManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+        
         else
         {
             Destroy(gameObject);
         }
+        
     }
 
 }
