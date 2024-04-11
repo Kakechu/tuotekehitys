@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         // high score text
         highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
         // score text
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "score: " + score.ToString();
     }
 
 
@@ -128,10 +128,10 @@ public class GameManager : MonoBehaviour
         // increments score value
         score++;
         // stores score value to scoreText (=the UI element) so it changes when needed
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = "score: " + score.ToString();
 
         // highscore
-        if (score > PlayerPrefs.GetInt("highScore", 0))
+        if (  score > PlayerPrefs.GetInt("highScore", 0))
         {
             PlayerPrefs.SetInt("highScore", score);
             //highScoreText.text = "Your record: " + score.ToString();
