@@ -268,7 +268,7 @@ MonoBehaviour:
 
     you will collect falling stars<sprite name="spritesheet_0">.
     But be careful! If an acorn<sprite name="spritesheet_1">falls on you, the game
-    is over. But you can earn score points by evading them. To move the pet, touch
+    is over. You can earn score points by dodging the acorns. To move the pet, touch
     the side of the screen you want to go to.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
@@ -565,7 +565,7 @@ Transform:
   m_GameObject: {fileID: 1000644942}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6255, y: 1.3496, z: -0.060225207}
+  m_LocalPosition: {x: 1.53, y: 1.49, z: -0.060225207}
   m_LocalScale: {x: 0.31840286, y: 0.265574, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
