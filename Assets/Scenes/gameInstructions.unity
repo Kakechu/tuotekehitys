@@ -201,8 +201,8 @@ Transform:
   m_GameObject: {fileID: 22771545}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0362, y: 0.035, z: -0.07575686}
-  m_LocalScale: {x: 0.43702087, y: 7.30956, z: 1}
+  m_LocalPosition: {x: -0.02, y: -0.19, z: -0.07575686}
+  m_LocalScale: {x: 0.41600016, y: 8.737152, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -241,7 +241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.812, y: 32}
+  m_AnchoredPosition: {x: 9.812, y: 55}
   m_SizeDelta: {x: 640.121, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128709341
@@ -268,7 +268,8 @@ MonoBehaviour:
 
     you will collect falling stars<sprite name="spritesheet_0">.
     But be careful! If an acorn<sprite name="spritesheet_1">falls on you, the game
-    is over. To move the pet, touch on the side of the screen you want to go to.'
+    is over. But you can earn score points by evading them. To move the pet, touch
+    the side of the screen you want to go to.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
   m_sharedMaterial: {fileID: -1196730890217063337, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
@@ -331,7 +332,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.8420486, y: -245.56339, z: -1.6500854, w: -432.94333}
+  m_margin: {x: 1.8420486, y: -245.56339, z: -1.6500854, w: -588.17615}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
