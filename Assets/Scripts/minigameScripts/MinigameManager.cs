@@ -96,6 +96,10 @@ public class GameManager : MonoBehaviour
                         SceneManager.LoadScene("squirrelView");
                     }
 
+                    else if (osuttuCollider.CompareTag("Help"))
+                    {
+                        SceneManager.LoadScene("gameInstructions");
+                    }
                 }
             }
         }
