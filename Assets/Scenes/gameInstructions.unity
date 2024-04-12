@@ -241,7 +241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.812, y: 62}
+  m_AnchoredPosition: {x: 9.812, y: 105}
   m_SizeDelta: {x: 640.121, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &128709341
@@ -264,10 +264,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nIn this minigame, \nyou will collect falling stars <sprite name=\"Star_for_text>\".
-    But be careful! If an acorn<sprite name=\"Star_for_text\"> falls on you, the
-    game is over. To move the character, touch on the side of the screen you want
-    to go to."
+  m_text: '
+
+    In this minigame,
+
+    you will collect falling stars<sprite name="spritesheet_0">.
+    But be careful! If an acorn<sprite name="spritesheet_1">falls on you, the game
+    is over. To move the character, touch on the side of the screen you want to go
+    to.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
   m_sharedMaterial: {fileID: -1196730890217063337, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
@@ -294,8 +298,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80
-  m_fontSizeBase: 80
+  m_fontSize: 85
+  m_fontSizeBase: 85
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -330,7 +334,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 1.8420486, y: -210.24875, z: -1.6500854, w: -432.94333}
+  m_margin: {x: 1.8420486, y: -245.56339, z: -1.6500854, w: -432.94333}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
