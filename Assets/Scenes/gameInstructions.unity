@@ -267,9 +267,9 @@ MonoBehaviour:
   m_text: 'In this minigame,
 
     you will collect falling stars<sprite name="spritesheet_0">.
-    But be careful! If an acorn<sprite name="spritesheet_1">falls on you, the game
-    is over. You can earn score points by dodging the acorns. To move the pet, touch
-    the side of the screen you want to go to.'
+    But be careful! If a pine cone<sprite name="spritesheet_1">falls on you, the
+    game is over. You can earn score points by dodging the pine cones. To move the
+    pet, touch the side of the screen you want to go to.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
   m_sharedMaterial: {fileID: -1196730890217063337, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
