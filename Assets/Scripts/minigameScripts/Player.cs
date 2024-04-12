@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
 
         // adding score text
         //collectibleScoreText.text = "Stars: " + collectCount.ToString();
-        collectibleScoreText.text = "<sprite name=\"Star_for_text\"> " + collectCount.ToString();
+        //collectibleScoreText.text = "<sprite name=\"spritesheet_0\"> " + collectCount.ToString();
 
         // get script
         //MinigameManager script = gameObject.GetComponent<MinigameManager>();
@@ -78,7 +78,7 @@ public class Player : MonoBehaviour
 
             // adding score text
             //collectibleScoreText.text = "Stars: " + collectCount.ToString();
-            collectibleScoreText.text = "<sprite name=\"Star_for_text\"> " + collectCount.ToString();
+            collectibleScoreText.text = "<sprite name=\"spritesheet_0\"> " + collectCount.ToString();
         }
     }
 

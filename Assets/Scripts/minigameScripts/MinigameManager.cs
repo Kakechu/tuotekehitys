@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         // high score text
         highScoreText.text = "Your record: " + PlayerPrefs.GetInt("highScore", 0).ToString();
         // score text
-        scoreText.text = "score: " + score.ToString();
+        //scoreText.text = "score: " + score.ToString();
     }
 
 
