@@ -39,7 +39,8 @@ public class Player : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
 
         // adding score text
-        collectibleScoreText.text = "Stars: " + collectCount.ToString();
+        //collectibleScoreText.text = "Stars: " + collectCount.ToString();
+        collectibleScoreText.text = "<sprite name=\"Star_for_text\"> " + collectCount.ToString();
 
         // get script
         //MinigameManager script = gameObject.GetComponent<MinigameManager>();
@@ -76,8 +77,9 @@ public class Player : MonoBehaviour
             }
 
             // adding score text
-            collectibleScoreText.text = "Stars: " + collectCount.ToString();
-            }
+            //collectibleScoreText.text = "Stars: " + collectCount.ToString();
+            collectibleScoreText.text = "<sprite name=\"Star_for_text\"> " + collectCount.ToString();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
