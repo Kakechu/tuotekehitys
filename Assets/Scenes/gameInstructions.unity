@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 128709342}
   - component: {fileID: 128709341}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: InstructionText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,9 +264,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Guide\nIn this minigame, \nyou will collect falling stars. But be careful!
-    If an acorn falls on you, the game is over. To move the character, touch on the
-    side of the screen you want to go to."
+  m_text: "\nIn this minigame, \nyou will collect falling stars <sprite name=\"Star_for_text>\".
+    But be careful! If an acorn<sprite name=\"Star_for_text\"> falls on you, the
+    game is over. To move the character, touch on the side of the screen you want
+    to go to."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
   m_sharedMaterial: {fileID: -1196730890217063337, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
