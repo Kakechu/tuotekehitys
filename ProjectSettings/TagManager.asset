@@ -16,6 +16,8 @@ TagManager:
   - Squirrel
   - Bunny
   - Hedgehog
+  - Help
+  - Exit
   layers:
   - Default
   - TransparentFX

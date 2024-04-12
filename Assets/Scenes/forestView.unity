@@ -882,7 +882,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9135e786d76d54745a980dbc4b29ca73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1df21bc1c4043aa49af31428ea0d1606, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -922,7 +922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50da1f3f7ca91240a2a2f49bc8dd52b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyText: {fileID: 0}
 --- !u!4 &1393793661
 Transform:
   m_ObjectHideFlags: 0
