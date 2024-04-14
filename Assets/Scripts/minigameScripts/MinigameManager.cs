@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
     // menu
     public GameObject minigameMenu;
 
+    public AudioSource sunnyMusic;
 
 
     //Minipelimenua
@@ -80,8 +81,10 @@ public class GameManager : MonoBehaviour
                     if (osuttuCollider.CompareTag("startMinigame") && !gameStarted)
                     {
                         //starts spawning falling objects
-                        StartSpawning();
+                        //gameStarted = true;
 
+                        StartSpawning();
+                  
                         gameStarted = true;
 
                         //removes the menu
@@ -89,6 +92,12 @@ public class GameManager : MonoBehaviour
 
                         // makes high score text blank
                         highScoreText.text = " ";
+
+                        if (gameStarted == true)
+                        {
+                            sunnyMusic.Play();
+                        }
+
                     }
 
                     else if (osuttuCollider.CompareTag("Back"))
