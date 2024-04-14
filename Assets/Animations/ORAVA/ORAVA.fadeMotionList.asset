@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 403ae2dd693bb1d4b924f6b8d206b053, type: 3}
+  m_Name: ORAVA.fadeMotionList
+  m_EditorClassIdentifier: 
+  MotionInstanceIds: 10f2ffffe4f1ffffc6f1ffffc4e8ffffa6e8ffff88e8ffff6ae8ffff
+  CubismFadeMotionObjects:
+  - {fileID: 11400000, guid: df04ff6e4658d244f93dcbd5b7e53820, type: 2}
+  - {fileID: 11400000, guid: 352d9ed7c45bb844f83e4ca7b3f7fe98, type: 2}
+  - {fileID: 11400000, guid: a72d8df93866c56419a6043d2fa7a9a9, type: 2}
+  - {fileID: 11400000, guid: d766d5ff52c61724a8a677abbd8340f7, type: 2}
+  - {fileID: 11400000, guid: 9e875dbb4eb4a8d4ab8217ba5ee34c17, type: 2}
+  - {fileID: 11400000, guid: 0f8ebd2471190794cb13ad816b513c71, type: 2}
+  - {fileID: 11400000, guid: b395691a4790efa43bb70a2e96ed9ae3, type: 2}
