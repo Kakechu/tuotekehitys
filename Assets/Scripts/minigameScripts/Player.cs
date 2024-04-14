@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -21,6 +22,13 @@ public class Player : MonoBehaviour
 
     public GameObject cam;
 
+
+    // AUDIO 
+    AudioSource sparkleSound;
+    AudioSource bonkSound;
+
+    public static bool bonk = false;
+
     // MIKÄÄN EI TOIMIIIIII
     // get gamemanager script ?? maybe ??
     //public MinigameManager minigameScript;
@@ -38,6 +46,13 @@ public class Player : MonoBehaviour
         // getting access to rigidbody component
         rigidBody = GetComponent<Rigidbody2D>();
 
+
+        //AudioSource[] audios = GetComponents<AudioSource>();
+        var audios = GetComponents(typeof(AudioSource)).Cast<AudioSource>().ToArray();
+        sparkleSound = audios[0];
+        bonkSound = audios[1];
+
+
         // adding score text
         //collectibleScoreText.text = "Stars: " + collectCount.ToString();
         //collectibleScoreText.text = "<sprite name=\"spritesheet_0\"> " + collectCount.ToString();
@@ -50,8 +65,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.gameStarted == true) 
-            {
+        if (GameManager.gameStarted == true)
+        {
             // if touching screen, adding velocity to Player
             // Input.GetMouseButton(0) should also work with touchscreen on mobile 
             if (Input.GetMouseButton(0))
@@ -90,9 +105,19 @@ public class Player : MonoBehaviour
 
         if (collision.gameObject.tag == "Obstacle")
         {
+            bonkSound.Play();
+            bonk = true;
             Debug.Log(collision.gameObject.tag);
-            SceneManager.LoadScene("Minigame");
-            GameManager.gameStarted = false;
+            //bonkSound.Play();
+            //SceneManager.LoadScene("Minigame");
+            //GameManager.gameStarted = false;
+            //bonkSound.Play();
+            Debug.Log("bonk is true");
+
+            if (bonk == true)
+            {
+                SomeMethod();
+            }
 
         }
 
@@ -106,10 +131,26 @@ public class Player : MonoBehaviour
 
             Debug.Log(collectCount);
             collectibleScoreText.text = collectCount.ToString();
+
+            sparkleSound.Play();
+            Debug.Log("sparkle");
+
             //Debug.Log(collision.gameObject.name);
         }
 
     }
 
-}
+    public void SomeMethod()
+    {
+        StartCoroutine(SomeCoroutine());
+    }
 
+    private IEnumerator SomeCoroutine()
+    {
+        bonkSound.Play();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Minigame");
+        GameManager.gameStarted = false;
+    }
+
+}
