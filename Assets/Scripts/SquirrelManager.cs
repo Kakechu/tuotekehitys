@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 //using UnityEngine.SceneManagement;
 
@@ -13,13 +15,13 @@ public class SquirrelManager : MonoBehaviour
 
 
 
-    /*
+
+    
     void Start()
     {
-        currentSquirrelHappiness = minHappiness;
-        happinessBar.SetMinHappiness(minHappiness);
+        happinessManager.SetHappiness(currentSquirrelHappiness);
     }
-    */
+    
 
     void Update()
     {
@@ -35,7 +37,7 @@ public class SquirrelManager : MonoBehaviour
                 // M‰‰rit‰ sormen sijainti
                 Vector3 kosketusSijainti = Camera.main.ScreenToWorldPoint(kosketus.position);
 
-                // Tarkista, onko kosketus osunut t‰h‰n GameObjectiin (el‰imeen)
+                // Tarkista, onko kosketus osunut t‰h‰n el‰imeen
                 Collider2D osuttuCollider = Physics2D.OverlapPoint(kosketusSijainti);
 
                 if (osuttuCollider != null)
@@ -43,19 +45,8 @@ public class SquirrelManager : MonoBehaviour
                     if (osuttuCollider.CompareTag("SquirrelView"))
                     {
                         addHappiness(1);
-                        Debug.Log("kutikuti");
-                        //currentSquirrelHappiness++;
                     }
-                    /*
-                    else if (osuttuCollider.CompareTag("Bunny"))
-                    {
-                        SceneManager.LoadScene("bunnyView");
-                    }
-                    else if (osuttuCollider.CompareTag("Hedgehog"))
-                    {
-                        SceneManager.LoadScene("hedgehogView");
-                    }
-                    */
+
                 }
 
                 void addHappiness(int happiness)
@@ -67,12 +58,6 @@ public class SquirrelManager : MonoBehaviour
 
             }
         }
+
     }
-    /*
-    public void addSquirrelHappiness(int happiness)
-    {
-        currentSquirrelHappiness += happiness;
-        happinessBar.SetHappiness(currentSquirrelHappiness);
-    }
-    */
 }
