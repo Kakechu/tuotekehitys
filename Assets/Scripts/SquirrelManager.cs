@@ -40,7 +40,7 @@ public class SquirrelManager : MonoBehaviour
 
                 if (osuttuCollider != null)
                 {
-                    if (osuttuCollider.CompareTag("Squirrel"))
+                    if (osuttuCollider.CompareTag("SquirrelView"))
                     {
                         addHappiness(1);
                         Debug.Log("kutikuti");
