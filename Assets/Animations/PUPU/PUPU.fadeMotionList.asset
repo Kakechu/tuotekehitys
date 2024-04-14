@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 403ae2dd693bb1d4b924f6b8d206b053, type: 3}
-  m_Name: PUPU(2).fadeMotionList
+  m_Name: PUPU.fadeMotionList
   m_EditorClassIdentifier: 
   MotionInstanceIds: cee6ffff98e6ffff70e6ffff48e6ffff20e6ffff00ddffffd8dcffff
   CubismFadeMotionObjects:
