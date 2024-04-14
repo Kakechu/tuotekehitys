@@ -18,6 +18,9 @@ TagManager:
   - Hedgehog
   - Help
   - Exit
+  - SquirrelView
+  - BunnyView
+  - HedgehogView
   layers:
   - Default
   - TransparentFX
