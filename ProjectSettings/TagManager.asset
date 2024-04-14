@@ -19,7 +19,8 @@ TagManager:
   - Help
   - Exit
   - SquirrelView
-  - Pet
+  - BunnyView
+  - HedgehogView
   layers:
   - Default
   - TransparentFX
