@@ -11,7 +11,7 @@ public class MoneyManager : MonoBehaviour
 
     public static MoneyManager instance;
 
-
+    //testi
     // Start is called before the first frame update
     void Start()
     {
