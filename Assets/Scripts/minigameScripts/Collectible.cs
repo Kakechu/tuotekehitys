@@ -12,5 +12,9 @@ public class Collectible : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (Player.exterminate == true)
+        {
+            Destroy(gameObject);
+        }
     }
 }

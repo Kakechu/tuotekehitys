@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
 
     public static bool bonk = false;
 
+    public static bool exterminate; 
+
     // MIKÄÄN EI TOIMIIIIII
     // get gamemanager script ?? maybe ??
     //public MinigameManager minigameScript;
@@ -144,19 +146,22 @@ public class Player : MonoBehaviour
     {
         StartCoroutine(SomeCoroutine());
         //DontDestroyOnLoad(bonkSound);
-        bonkSound.Play();
+        //bonkSound.Play();
         //SceneManager.LoadScene("Minigame");
         //GameManager.gameStarted = false;
+        //backgroundMusicManager.plsPlay = true;
     }
 
     
     private IEnumerator SomeCoroutine()
     {
         bonkSound.Play();
+        exterminate = true;
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Minigame");
         GameManager.gameStarted = false;
         backgroundMusicManager.plsPlay = true;
+        exterminate = false;
     }  
-
+    
 }
