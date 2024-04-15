@@ -79,7 +79,7 @@ public class HedgehogManager : MonoBehaviour
                     eiosuttu = true;
 
                     // Palautetaan timer alkutilaan
-                    timer.timeLeft = 7;
+                    timer.timeLeft = 5;
                 }
 
             }

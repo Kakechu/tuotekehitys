@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimerScript : MonoBehaviour
 {
-    public float timeLeft = 7;
+    public float timeLeft = 5;
     public static bool timerRunning = false;
     public static TimerScript instance;
     public void Start()
