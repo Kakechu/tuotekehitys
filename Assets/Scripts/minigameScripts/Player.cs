@@ -156,6 +156,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Minigame");
         GameManager.gameStarted = false;
+        backgroundMusicManager.plsPlay = true;
     }  
 
 }
