@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
                     if (osuttuCollider.CompareTag("startMinigame") && !gameStarted)
                     {
                         //starts spawning falling objects
-                        //gameStarted = true;
+                        
 
                         StartSpawning();
                   
