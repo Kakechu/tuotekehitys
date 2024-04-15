@@ -8,7 +8,10 @@ public class backgroundMusicManager : MonoBehaviour
 
     public AudioSource bgMusic;
 
-    public static bool musicStart = true;
+    public static bool musicStart;
+    public static bool plsPlay;
+    public static bool plsStop;
+    
 
     void Start()
     {
@@ -18,9 +21,15 @@ public class backgroundMusicManager : MonoBehaviour
     
     void Update()
     {
-        if (musicStart == false)
+        if (plsStop == true)
         {
-            bgMusic.Stop();
+            bgMusic.Pause();
+            plsStop = false;
+        }
+        if (plsPlay == true)
+        {
+            bgMusic.UnPause();
+            plsPlay = false;
         }
     } 
 
@@ -29,6 +38,5 @@ public class backgroundMusicManager : MonoBehaviour
         bgMusic.Play();
         DontDestroyOnLoad(bgMusic);
     }
-    
 
 }
