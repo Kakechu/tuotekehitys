@@ -19,6 +19,14 @@ public class Obstacle : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (PlayerBunny.exterminate == true)
+        {
+            Destroy(gameObject);
+        }
+        if (PlayerHedgehog.exterminate == true)
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
