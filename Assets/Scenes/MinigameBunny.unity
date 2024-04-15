@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 664473091}
   m_Layer: 0
   m_Name: HELP
-  m_TagString: Help
+  m_TagString: HelpBunny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1370,11 +1370,11 @@ GameObject:
   - component: {fileID: 1354172694}
   - component: {fileID: 1354172697}
   - component: {fileID: 1354172696}
-  - component: {fileID: 1354172698}
+  - component: {fileID: 1354172701}
   - component: {fileID: 1354172700}
   - component: {fileID: 1354172699}
   m_Layer: 0
-  m_Name: Squirrel
+  m_Name: Bunny
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1421,7 +1421,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a0d0ae563c2300c479a3908d6e53301c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f61341e061190a448b25e81912b543d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1519,22 +1519,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &1354172698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354172693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b02e3075a404bb42a1903cce92e6e0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 15
-  collectCount: 0
-  collectibleScoreText: {fileID: 674092494}
-  cam: {fileID: 0}
 --- !u!82 &1354172699
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1727,6 +1711,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1354172701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354172693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a20ff96c58a7074cb895e56e728351a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 15
+  collectCount: 0
+  collectibleScoreText: {fileID: 674092494}
+  cam: {fileID: 0}
 --- !u!1 &1772643524
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 1820449435}
   m_Layer: 0
   m_Name: BACK
-  m_TagString: Back
+  m_TagString: BackToBunny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

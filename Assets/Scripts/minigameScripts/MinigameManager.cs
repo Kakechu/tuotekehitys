@@ -106,10 +106,31 @@ public class GameManager : MonoBehaviour
                         SceneManager.LoadScene("squirrelView");
                     }
 
+                    else if (osuttuCollider.CompareTag("BackToBunny"))
+                    {
+                        SceneManager.LoadScene("bunnyView");
+                    }
+
+                    else if (osuttuCollider.CompareTag("BackToHedgehog"))
+                    {
+                        SceneManager.LoadScene("hedgehogView");
+                    }
+
                     else if (osuttuCollider.CompareTag("Help"))
                     {
                         SceneManager.LoadScene("gameInstructions");
                     }
+
+                    else if (osuttuCollider.CompareTag("HelpBunny"))
+                    {
+                        SceneManager.LoadScene("helpBunny");
+                    }
+
+                    else if (osuttuCollider.CompareTag("HelpHedgehog"))
+                    {
+                        SceneManager.LoadScene("helpHedgehog");
+                    }
+
                 }
             }
         }
