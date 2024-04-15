@@ -12,6 +12,7 @@ public class Collectible : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        // destroyes objects when minigame ends
         if (Player.exterminate == true)
         {
             Destroy(gameObject);

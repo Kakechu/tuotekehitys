@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
 
     public static bool bonk = false;
 
+    // indicates if falling objects need to be destroyed
     public static bool exterminate; 
 
     // MIKÄÄN EI TOIMIIIIII
