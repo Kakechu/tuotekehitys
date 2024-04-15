@@ -14,6 +14,11 @@ public class Obstacle : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        // destroyes objects when minigame ends
+        if (Player.exterminate == true)
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
