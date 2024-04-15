@@ -35,6 +35,15 @@ public class ExitToMinigame : MonoBehaviour
                         SceneManager.LoadScene("Minigame");
                     }
 
+                    else if (osuttuCollider.CompareTag("ExitToBunny"))
+                    {
+                        SceneManager.LoadScene("MinigameBunny");
+                    }
+
+                    else if (osuttuCollider.CompareTag("ExitToHedgehog"))
+                    {
+                        SceneManager.LoadScene("MinigameHedgehog");
+                    }
 
                 }
             }
