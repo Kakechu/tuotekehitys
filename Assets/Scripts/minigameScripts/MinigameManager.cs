@@ -95,6 +95,7 @@ public class GameManager : MonoBehaviour
 
                         if (gameStarted == true)
                         {
+                            backgroundMusicManager.plsStop = true;
                             sunnyMusic.Play();
                         }
 
