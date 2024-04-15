@@ -30,6 +30,17 @@ public class PlayMiniGame : MonoBehaviour
                         SceneManager.LoadScene(MiniGame);
                     }
 
+                    else if (osuttuCollider.CompareTag("PlayBunny"))
+                    {
+                        SceneManager.LoadScene("MinigameBunny");
+                    }
+
+                    else if (osuttuCollider.CompareTag("PlayHedgehog"))
+                    {
+                        SceneManager.LoadScene("MinigameHedgehog");
+                    }
+
+
 
                 }
             }
