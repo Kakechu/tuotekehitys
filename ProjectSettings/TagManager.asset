@@ -28,6 +28,8 @@ TagManager:
   - HelpHedgehog
   - ExitToBunny
   - ExitToHedgehog
+  - PlayBunny
+  - PlayHedgehog
   layers:
   - Default
   - TransparentFX
