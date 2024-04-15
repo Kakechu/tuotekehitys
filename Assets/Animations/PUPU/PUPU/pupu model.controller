@@ -339,7 +339,7 @@ AnimatorStateMachine:
   - {fileID: -7061493436103074186}
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
-  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ExitPosition: {x: 810, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -5724935103274478838}
 --- !u!1101 &648372694683296168
