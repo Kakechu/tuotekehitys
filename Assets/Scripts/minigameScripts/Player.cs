@@ -143,14 +143,19 @@ public class Player : MonoBehaviour
     public void SomeMethod()
     {
         StartCoroutine(SomeCoroutine());
+        //DontDestroyOnLoad(bonkSound);
+        bonkSound.Play();
+        //SceneManager.LoadScene("Minigame");
+        //GameManager.gameStarted = false;
     }
 
+    
     private IEnumerator SomeCoroutine()
     {
         bonkSound.Play();
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Minigame");
         GameManager.gameStarted = false;
-    }
+    }  
 
 }
