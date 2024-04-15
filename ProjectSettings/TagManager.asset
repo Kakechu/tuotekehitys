@@ -21,6 +21,7 @@ TagManager:
   - SquirrelView
   - BunnyView
   - HedgehogView
+  - mainMusic
   layers:
   - Default
   - TransparentFX
