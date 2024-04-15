@@ -29,6 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameBunny.unity
     guid: 949ed8560548b5542b9aa0e475b3efc3
+  - enabled: 1
+    path: Assets/Scenes/MinigameHedgehog.unity
+    guid: f0631f7c45bbb5f469184f0b4b3aa6d0
+  - enabled: 1
+    path: Assets/Scenes/HelpBunny.unity
+    guid: f1234c631ee313645898dc1b846dac13
+  - enabled: 1
+    path: Assets/Scenes/HelpHedgehog.unity
+    guid: a84a47e98a31d7c4ca8c81c87d41e5ce
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 547277402cb7a7241865fdb556841dfa, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5cec8ad4f14087a4cb6b5356de99ed1b, type: 2}

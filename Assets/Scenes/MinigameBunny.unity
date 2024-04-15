@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 664473091}
   m_Layer: 0
   m_Name: HELP
-  m_TagString: Help
+  m_TagString: HelpBunny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1817,7 +1817,7 @@ GameObject:
   - component: {fileID: 1820449435}
   m_Layer: 0
   m_Name: BACK
-  m_TagString: Back
+  m_TagString: BackToBunny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
