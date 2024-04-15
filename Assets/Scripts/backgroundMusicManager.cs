@@ -12,13 +12,6 @@ public class backgroundMusicManager : MonoBehaviour
     public static bool plsPlay;
     public static bool plsStop;
     
-
-    void Start()
-    {
-        //playBGMusic();
-    }
-
-    
     void Update()
     {
         if (musicStart == true)
@@ -43,7 +36,5 @@ public class backgroundMusicManager : MonoBehaviour
         bgMusic.Play();
         DontDestroyOnLoad(bgMusic);
     }
-
-    
 
 }
