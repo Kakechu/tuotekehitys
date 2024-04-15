@@ -22,6 +22,14 @@ TagManager:
   - BunnyView
   - HedgehogView
   - mainMusic
+  - BackToHedgehog
+  - BackToBunny
+  - HelpBunny
+  - HelpHedgehog
+  - ExitToBunny
+  - ExitToHedgehog
+  - PlayBunny
+  - PlayHedgehog
   layers:
   - Default
   - TransparentFX
