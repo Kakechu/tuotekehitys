@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BunnyManager : MonoBehaviour
@@ -9,6 +11,10 @@ public class BunnyManager : MonoBehaviour
     public int minHappiness = 0;
     public static int currentBunnyHappiness;
     public HappinessManager happinessManager;
+    public static TimerScript timer;
+    public bool osuttu = false;
+    public bool eiosuttu = true;
+
 
 
 
@@ -17,6 +23,7 @@ public class BunnyManager : MonoBehaviour
     void Start()
     {
         happinessManager.SetHappiness(currentBunnyHappiness);
+        timer = GameObject.FindObjectOfType<TimerScript>();
     }
 
 
@@ -41,20 +48,52 @@ public class BunnyManager : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("BunnyView"))
                     {
-                        addHappiness(1);
+                        collisionFunction();
                     }
 
                 }
 
-                void addHappiness(int happiness)
-                {
-                    currentBunnyHappiness += happiness;
-
-                    happinessManager.SetHappiness(currentBunnyHappiness);
-                }
 
             }
         }
 
+    }// K‰ynnist‰‰ piste-ehdot ja timerin
+    void collisionFunction()
+    {
+        collisionBunny();
+        timer.StartTimer();
+    }
+    void collisionBunny()
+    {
+        eiosuttu = false;
+        if (eiosuttu == false)
+        {
+            Debug.Log("OSUMA");
+            osuttu = true;
+            if (osuttu == true && TimerScript.timerRunning == false)
+            {
+                // Lis‰t‰‰n tyytyv‰isyyspiste
+                addHappiness(1);
+                Debug.Log("+1 PUPU");
+                osuttu = false;
+                if (osuttu == false && TimerScript.timerRunning == false)
+                {
+                    Debug.Log("eiosuttu true taas");
+                    eiosuttu = true;
+
+                    // Palautetaan timer alkutilaan
+                    timer.timeLeft = 7;
+                }
+
+            }
+
+
+        }
+    }
+    void addHappiness(int happiness)
+    {
+        currentBunnyHappiness += happiness;
+
+        happinessManager.SetHappiness(currentBunnyHappiness);
     }
 }

@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HedgehogManager : MonoBehaviour
@@ -9,6 +11,9 @@ public class HedgehogManager : MonoBehaviour
     public int minHappiness = 0;
     public static int currentHedgehogHappiness;
     public HappinessManager happinessManager;
+    public static TimerScript timer;
+    public bool osuttu = false;
+    public bool eiosuttu = true;
 
 
 
@@ -17,6 +22,7 @@ public class HedgehogManager : MonoBehaviour
     void Start()
     {
         happinessManager.SetHappiness(currentHedgehogHappiness);
+        timer = GameObject.FindObjectOfType<TimerScript>();
     }
 
 
@@ -41,20 +47,52 @@ public class HedgehogManager : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("HedgehogView"))
                     {
-                        addHappiness(1);
+                        collisionFunction();
                     }
 
                 }
-
-                void addHappiness(int happiness)
-                {
-                    currentHedgehogHappiness += happiness;
-
-                    happinessManager.SetHappiness(currentHedgehogHappiness);
-                }
-
             }
         }
 
+    }// K‰ynnist‰‰ piste-ehdot ja timerin
+    void collisionFunction()
+    {
+        collisionHedgehog();
+        timer.StartTimer();
+    }
+    void collisionHedgehog()
+    {
+        eiosuttu = false;
+        if (eiosuttu == false)
+        {
+            Debug.Log("OSUMA");
+            osuttu = true;
+            if (osuttu == true && TimerScript.timerRunning == false)
+            {
+                // Lis‰t‰‰n tyytyv‰isyyspiste
+                addHappiness(1);
+                Debug.Log("+1 SIILI");
+                osuttu = false;
+                if (osuttu == false && TimerScript.timerRunning == false)
+                {
+                    Debug.Log("eiosuttu true taas");
+                    eiosuttu = true;
+
+                    // Palautetaan timer alkutilaan
+                    timer.timeLeft = 7;
+                }
+
+            }
+
+
+        }
+    }
+    void addHappiness(int happiness)
+    {
+        Debug.Log("PISTE");
+        currentHedgehogHappiness += happiness;
+
+        happinessManager.SetHappiness(currentHedgehogHappiness);
     }
 }
+

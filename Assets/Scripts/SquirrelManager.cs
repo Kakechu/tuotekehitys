@@ -12,16 +12,20 @@ public class SquirrelManager : MonoBehaviour
     public int minHappiness = 0;
     public static int currentSquirrelHappiness;
     public HappinessManager happinessManager;
+    public static TimerScript timer;
+    public bool osuttu = false;
+    public bool eiosuttu = true;
 
 
 
 
-    
+
     void Start()
     {
         happinessManager.SetHappiness(currentSquirrelHappiness);
+        timer = GameObject.FindObjectOfType<TimerScript>();
     }
-    
+
 
     void Update()
     {
@@ -44,20 +48,53 @@ public class SquirrelManager : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("SquirrelView"))
                     {
-                        addHappiness(1);
+                        collisionFunction();
                     }
 
                 }
 
-                void addHappiness(int happiness)
-                {
-                    currentSquirrelHappiness += happiness;
-
-                    happinessManager.SetHappiness(currentSquirrelHappiness);
-                }
 
             }
         }
 
+    } // K‰ynnist‰‰ piste-ehdot ja timerin
+    void collisionFunction()
+    {
+        collisionSquirrel();
+        timer.StartTimer();
+    }
+    void collisionSquirrel()
+    {
+        eiosuttu = false;
+        if (eiosuttu == false)
+        {
+            Debug.Log("OSUMA");
+            osuttu = true;
+            if (osuttu == true && TimerScript.timerRunning == false)
+            {
+                // Lis‰t‰‰n tyytyv‰isyyspiste
+                addHappiness(1);
+                Debug.Log("+1 ORAVA");
+                osuttu = false;
+                if (osuttu == false && TimerScript.timerRunning == false)
+                {
+                    Debug.Log("eiosuttu true taas");
+                    eiosuttu = true;
+
+                    // Palautetaan timer alkutilaan
+                    timer.timeLeft = 7;
+                }
+
+            }
+
+
+        }
+    }
+    void addHappiness(int happiness)
+    {
+        Debug.Log("PISTE");
+        currentSquirrelHappiness += happiness;
+
+        happinessManager.SetHappiness(currentSquirrelHappiness);
     }
 }
