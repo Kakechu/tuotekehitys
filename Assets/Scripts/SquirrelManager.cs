@@ -87,6 +87,8 @@ public class SquirrelManager : MonoBehaviour
             {
                 // Lis‰t‰‰n tyytyv‰isyyspiste
                 addHappiness(1);
+                // rapsutus‰‰ni
+                SFXManager.happyPet = true;
                 Debug.Log("+1 ORAVA");
                 osuttu = false;
                 if (osuttu == false && TimerScript.timerRunning == false)
@@ -112,6 +114,8 @@ public class SquirrelManager : MonoBehaviour
             {
                 // Lis‰t‰‰n tyytyv‰isyyspiste
                 addHappiness(3);
+                // rousk ‰‰ni
+                SFXManager.goodSoup = true;
                 Debug.Log("ORAVAHAUKS");
                 osuttu = false;
                 if (osuttu == false && TimerScript.timerRunning == false)
