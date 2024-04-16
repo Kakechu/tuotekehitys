@@ -12,6 +12,7 @@ public class HedgehogManager : MonoBehaviour
     public static int currentHedgehogHappiness;
     public HappinessManager happinessManager;
     public static TimerScript timer;
+    public static TimerScript foodtimer;
     public bool osuttu = false;
     public bool eiosuttu = true;
 
@@ -23,6 +24,7 @@ public class HedgehogManager : MonoBehaviour
     {
         happinessManager.SetHappiness(currentHedgehogHappiness);
         timer = GameObject.FindObjectOfType<TimerScript>();
+        foodtimer = GameObject.FindObjectOfType<TimerScript>();
     }
 
 
@@ -50,6 +52,11 @@ public class HedgehogManager : MonoBehaviour
                         collisionFunction();
                     }
 
+                    else if (osuttuCollider.CompareTag("Feed")) // lis‰ys
+                    {
+                        collisionFeed();
+                    }
+
                 }
             }
         }
@@ -60,6 +67,13 @@ public class HedgehogManager : MonoBehaviour
         collisionHedgehog();
         timer.StartTimer();
     }
+
+    void collisionFeed()
+    {
+        gotFood();
+        foodtimer.StartTimer();
+    }
+
     void collisionHedgehog()
     {
         eiosuttu = false;
@@ -81,12 +95,35 @@ public class HedgehogManager : MonoBehaviour
                     // Palautetaan timer alkutilaan
                     timer.timeLeft = 5;
                 }
-
             }
-
-
         }
     }
+
+    void gotFood()
+    {
+        eiosuttu = false;
+        if (eiosuttu == false)
+        {
+            Debug.Log("RuokaOSUMA");
+            osuttu = true;
+            if (osuttu == true && TimerScript.timerRunning == false)
+            {
+                // Lis‰t‰‰n tyytyv‰isyyspiste
+                addHappiness(3);
+                Debug.Log("SIILIHAUKS");
+                osuttu = false;
+                if (osuttu == false && TimerScript.timerRunning == false)
+                {
+                    Debug.Log("eiosuttu true taas");
+                    eiosuttu = true;
+
+                    // Palautetaan timer alkutilaan
+                    foodtimer.timeLeft = 5;
+                }
+            }
+        }
+    }
+
     void addHappiness(int happiness)
     {
         Debug.Log("PISTE");
@@ -94,5 +131,9 @@ public class HedgehogManager : MonoBehaviour
 
         happinessManager.SetHappiness(currentHedgehogHappiness);
     }
+
+
+
+
 }
 

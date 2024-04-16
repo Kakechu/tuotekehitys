@@ -13,6 +13,7 @@ public class SquirrelManager : MonoBehaviour
     public static int currentSquirrelHappiness;
     public HappinessManager happinessManager;
     public static TimerScript timer;
+    public static TimerScript foodtimer;
     public bool osuttu = false;
     public bool eiosuttu = true;
 
@@ -24,6 +25,7 @@ public class SquirrelManager : MonoBehaviour
     {
         happinessManager.SetHappiness(currentSquirrelHappiness);
         timer = GameObject.FindObjectOfType<TimerScript>();
+        foodtimer = GameObject.FindObjectOfType<TimerScript>();
     }
 
 
@@ -51,6 +53,10 @@ public class SquirrelManager : MonoBehaviour
                         collisionFunction();
                     }
 
+                    else if (osuttuCollider.CompareTag("Feed")) // lis‰ys
+                    {
+                        collisionFeed();
+                    }
                 }
 
 
@@ -63,6 +69,13 @@ public class SquirrelManager : MonoBehaviour
         collisionSquirrel();
         timer.StartTimer();
     }
+    void collisionFeed()
+    {
+        gotFood();
+        foodtimer.StartTimer();
+    }
+
+
     void collisionSquirrel()
     {
         eiosuttu = false;
@@ -84,12 +97,36 @@ public class SquirrelManager : MonoBehaviour
                     // Palautetaan timer alkutilaan
                     timer.timeLeft = 5;
                 }
-
             }
-
-
         }
     }
+
+    void gotFood()
+    {
+        eiosuttu = false;
+        if (eiosuttu == false)
+        {
+            Debug.Log("RuokaOSUMA");
+            osuttu = true;
+            if (osuttu == true && TimerScript.timerRunning == false)
+            {
+                // Lis‰t‰‰n tyytyv‰isyyspiste
+                addHappiness(3);
+                Debug.Log("ORAVAHAUKS");
+                osuttu = false;
+                if (osuttu == false && TimerScript.timerRunning == false)
+                {
+                    Debug.Log("eiosuttu true taas");
+                    eiosuttu = true;
+
+                    // Palautetaan timer alkutilaan
+                    foodtimer.timeLeft = 5;
+                }
+            }
+        }
+    }
+
+
     void addHappiness(int happiness)
     {
         Debug.Log("PISTE");
