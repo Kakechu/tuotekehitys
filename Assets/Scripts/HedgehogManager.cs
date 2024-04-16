@@ -15,6 +15,8 @@ public class HedgehogManager : MonoBehaviour
     public static TimerScript foodtimer;
     public bool osuttu = false;
     public bool eiosuttu = true;
+    public bool ruokaosuttu = false;
+    public bool ruokaeiosuttu = true;
 
 
 
@@ -27,6 +29,8 @@ public class HedgehogManager : MonoBehaviour
         foodtimer = GameObject.FindObjectOfType<TimerScript>();
         timer.timeLeft = 5;
         TimerScript.timerRunning = false;
+        foodtimer.foodtimeLeft = 5;
+        TimerScript.foodtimerRunning = false;
     }
 
 
@@ -73,7 +77,7 @@ public class HedgehogManager : MonoBehaviour
     void collisionFeed()
     {
         gotFood();
-        foodtimer.StartTimer();
+        foodtimer.StartFoodTimer();
     }
 
     void collisionHedgehog()
@@ -105,26 +109,26 @@ public class HedgehogManager : MonoBehaviour
 
     void gotFood()
     {
-        eiosuttu = false;
-        if (eiosuttu == false)
+        ruokaeiosuttu = false;
+        if (ruokaeiosuttu == false)
         {
             Debug.Log("RuokaOSUMA");
-            osuttu = true;
-            if (osuttu == true && TimerScript.timerRunning == false)
+            ruokaosuttu = true;
+            if (ruokaosuttu == true && TimerScript.foodtimerRunning == false)
             {
                 // Lis‰t‰‰n tyytyv‰isyyspiste
                 addHappiness(3);
                 // rousk ‰‰ni
                 SFXManager.goodSoup = true;
                 Debug.Log("SIILIHAUKS");
-                osuttu = false;
-                if (osuttu == false && TimerScript.timerRunning == false)
+                ruokaosuttu = false;
+                if (ruokaosuttu == false && TimerScript.foodtimerRunning == false)
                 {
                     Debug.Log("eiosuttu true taas");
-                    eiosuttu = true;
+                    ruokaeiosuttu = true;
 
                     // Palautetaan timer alkutilaan
-                    foodtimer.timeLeft = 5;
+                    foodtimer.foodtimeLeft = 5;
                 }
             }
         }
