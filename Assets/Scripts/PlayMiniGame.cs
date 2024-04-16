@@ -27,16 +27,19 @@ public class PlayMiniGame : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("PlayMiniGame"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene(MiniGame);
                     }
 
                     else if (osuttuCollider.CompareTag("PlayBunny"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("MinigameBunny");
                     }
 
                     else if (osuttuCollider.CompareTag("PlayHedgehog"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("MinigameHedgehog");
                     }
 

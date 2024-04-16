@@ -81,8 +81,8 @@ public class GameManager : MonoBehaviour
                     if (osuttuCollider.CompareTag("startMinigame") && !gameStarted)
                     {
                         //starts spawning falling objects
-                        
 
+                        SFXManager.clickHappened = true;
                         StartSpawning();
                   
                         gameStarted = true;
@@ -103,31 +103,37 @@ public class GameManager : MonoBehaviour
 
                     else if (osuttuCollider.CompareTag("Back"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("squirrelView");
                     }
 
                     else if (osuttuCollider.CompareTag("BackToBunny"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("bunnyView");
                     }
 
                     else if (osuttuCollider.CompareTag("BackToHedgehog"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("hedgehogView");
                     }
 
                     else if (osuttuCollider.CompareTag("Help"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("gameInstructions");
                     }
 
                     else if (osuttuCollider.CompareTag("HelpBunny"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("helpBunny");
                     }
 
                     else if (osuttuCollider.CompareTag("HelpHedgehog"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("helpHedgehog");
                     }
 

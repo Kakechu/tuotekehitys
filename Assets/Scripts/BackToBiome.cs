@@ -32,6 +32,7 @@ public class BackToBiome : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("Back"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene(forestScene);
                     }
 
