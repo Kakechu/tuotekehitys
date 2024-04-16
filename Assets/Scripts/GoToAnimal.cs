@@ -32,16 +32,19 @@ public class GoToAnimal : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("Squirrel"))
                     {
+                        //SFXManager.clickHappened = true;
                         SceneManager.LoadScene("squirrelView");
-
                     }
 
                     else if (osuttuCollider.CompareTag("Bunny"))
                     {
+                        //SFXManager.clickHappened = true;
                         SceneManager.LoadScene("bunnyView");
                     }
+
                     else if (osuttuCollider.CompareTag("Hedgehog"))
                     {
+                        //SFXManager.clickHappened = true;
                         SceneManager.LoadScene("hedgehogView");
                     }
                 }
