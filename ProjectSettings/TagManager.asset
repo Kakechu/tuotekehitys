@@ -31,6 +31,8 @@ TagManager:
   - PlayBunny
   - PlayHedgehog
   - Feed
+  - Left
+  - Right
   layers:
   - Default
   - TransparentFX
