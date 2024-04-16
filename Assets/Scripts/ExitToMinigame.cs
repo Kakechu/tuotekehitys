@@ -32,16 +32,19 @@ public class ExitToMinigame : MonoBehaviour
                 {
                     if (osuttuCollider.CompareTag("Exit"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("Minigame");
                     }
 
                     else if (osuttuCollider.CompareTag("ExitToBunny"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("MinigameBunny");
                     }
 
                     else if (osuttuCollider.CompareTag("ExitToHedgehog"))
                     {
+                        SFXManager.clickHappened = true;
                         SceneManager.LoadScene("MinigameHedgehog");
                     }
 
