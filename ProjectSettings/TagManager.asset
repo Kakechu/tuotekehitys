@@ -30,6 +30,7 @@ TagManager:
   - ExitToHedgehog
   - PlayBunny
   - PlayHedgehog
+  - Feed
   layers:
   - Default
   - TransparentFX
