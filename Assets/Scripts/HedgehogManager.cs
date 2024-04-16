@@ -85,6 +85,8 @@ public class HedgehogManager : MonoBehaviour
             {
                 // Lis‰t‰‰n tyytyv‰isyyspiste
                 addHappiness(1);
+                // rapsutus‰‰ni
+                SFXManager.happyPet = true;
                 Debug.Log("+1 SIILI");
                 osuttu = false;
                 if (osuttu == false && TimerScript.timerRunning == false)
@@ -110,6 +112,8 @@ public class HedgehogManager : MonoBehaviour
             {
                 // Lis‰t‰‰n tyytyv‰isyyspiste
                 addHappiness(3);
+                // rousk ‰‰ni
+                SFXManager.goodSoup = true;
                 Debug.Log("SIILIHAUKS");
                 osuttu = false;
                 if (osuttu == false && TimerScript.timerRunning == false)
