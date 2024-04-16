@@ -12,6 +12,7 @@ public class BunnyManager : MonoBehaviour
     public static int currentBunnyHappiness;
     public HappinessManager happinessManager;
     public static TimerScript timer;
+    public static TimerScript foodtimer;
     public bool osuttu = false;
     public bool eiosuttu = true;
 
@@ -24,6 +25,7 @@ public class BunnyManager : MonoBehaviour
     {
         happinessManager.SetHappiness(currentBunnyHappiness);
         timer = GameObject.FindObjectOfType<TimerScript>();
+        foodtimer = GameObject.FindObjectOfType<TimerScript>();
     }
 
 
@@ -51,6 +53,10 @@ public class BunnyManager : MonoBehaviour
                         collisionFunction();
                     }
 
+                    else if (osuttuCollider.CompareTag("Feed")) // lis‰ys
+                    {
+                        collisionFeed();
+                    }
                 }
 
 
@@ -63,6 +69,12 @@ public class BunnyManager : MonoBehaviour
         collisionBunny();
         timer.StartTimer();
     }
+    void collisionFeed()
+    {
+        gotFood();
+        foodtimer.StartTimer();
+    }
+
     void collisionBunny()
     {
         eiosuttu = false;
@@ -90,6 +102,33 @@ public class BunnyManager : MonoBehaviour
 
         }
     }
+
+    void gotFood()
+    {
+        eiosuttu = false;
+        if (eiosuttu == false)
+        {
+            Debug.Log("RuokaOSUMA");
+            osuttu = true;
+            if (osuttu == true && TimerScript.timerRunning == false)
+            {
+                // Lis‰t‰‰n tyytyv‰isyyspiste
+                addHappiness(3);
+                Debug.Log("BUNNYHAUKS");
+                osuttu = false;
+                if (osuttu == false && TimerScript.timerRunning == false)
+                {
+                    Debug.Log("eiosuttu true taas");
+                    eiosuttu = true;
+
+                    // Palautetaan timer alkutilaan
+                    foodtimer.timeLeft = 5;
+                }
+            }
+        }
+    }
+
+
     void addHappiness(int happiness)
     {
         currentBunnyHappiness += happiness;
