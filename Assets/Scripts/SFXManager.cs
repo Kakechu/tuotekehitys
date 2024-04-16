@@ -19,7 +19,9 @@ public class SFXManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // peliobjekti ei tuhoudu scenen vaihtuessa
         DontDestroyOnLoad(gameObject);
+        // löytää audiosourcet
         var SFXs = GetComponents(typeof(AudioSource)).Cast<AudioSource>().ToArray();
         crunchSound = SFXs[0];
         petSound = SFXs[1];
