@@ -5094,6 +5094,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minHappiness: 0
   happinessManager: {fileID: 318406240}
+  osuttu: 0
+  eiosuttu: 1
 --- !u!114 &1242292892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5106,6 +5108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90070e0ba0409c74496e88cceda623c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeLeft: 5
 --- !u!43 &1281968698
 Mesh:
   m_ObjectHideFlags: 0
@@ -7148,6 +7151,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1516273465}
+  - component: {fileID: 1516273466}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -7171,6 +7175,19 @@ Transform:
   - {fileID: 1843897937}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1516273466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516273464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0627538cd333256449184d4941f0569d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swipeThreshold: 50
 --- !u!43 &1692685361
 Mesh:
   m_ObjectHideFlags: 0
