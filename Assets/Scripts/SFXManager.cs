@@ -9,8 +9,12 @@ public class SFXManager : MonoBehaviour
     AudioSource petSound;
     AudioSource clickSound;
 
+    // boolean rapsutukselle
     public static bool happyPet = false;
+    // boolean ruokinnalle
     public static bool goodSoup = false;
+    // boolean napin painallukselle
+    public static bool clickHappened = false;
 
     // Start is called before the first frame update
     void Start()
@@ -25,15 +29,23 @@ public class SFXManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // jos eläintä rapsutettu
         if (happyPet == true)
         {
             petSound.Play();
             happyPet = false;
         }
+        // jos eläin ruokittu
         if (goodSoup == true)
         {
             crunchSound.Play();
             goodSoup = false;
+        }
+        // jos nappulaa painettu
+        if (clickHappened == true)
+        {
+            clickSound.Play();
+            clickHappened = false;
         }
     }
 }
