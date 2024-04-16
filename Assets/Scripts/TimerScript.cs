@@ -5,7 +5,9 @@ using UnityEngine;
 public class TimerScript : MonoBehaviour
 {
     public float timeLeft = 5;
+    public float foodtimeLeft = 5;
     public static bool timerRunning = false;
+    public static bool foodtimerRunning = false;
     public static TimerScript instance;
     public void Start()
     {
@@ -28,11 +30,33 @@ public class TimerScript : MonoBehaviour
             }
 
         }
+        //ruoka-ajastin
+        if (foodtimerRunning)
+        {
+            if (foodtimeLeft > 0)
+            {
+                foodtimeLeft = foodtimeLeft - Time.deltaTime;
+
+            }
+            else
+            {
+                Debug.Log("ruoka-aika loppu");
+                foodtimeLeft = 0;
+                foodtimerRunning = false;
+            }
+        }
+
+
+
     }
 
     public void StartTimer()
     {
         timerRunning = true;
+    }
 
+    public void StartFoodTimer()
+    {
+        foodtimerRunning = true;
     }
 }
