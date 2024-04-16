@@ -26,6 +26,8 @@ public class SquirrelManager : MonoBehaviour
         happinessManager.SetHappiness(currentSquirrelHappiness);
         timer = GameObject.FindObjectOfType<TimerScript>();
         foodtimer = GameObject.FindObjectOfType<TimerScript>();
+        timer.timeLeft = 5;
+        TimerScript.timerRunning = false;
     }
 
 

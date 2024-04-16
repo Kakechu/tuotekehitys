@@ -26,6 +26,8 @@ public class BunnyManager : MonoBehaviour
         happinessManager.SetHappiness(currentBunnyHappiness);
         timer = GameObject.FindObjectOfType<TimerScript>();
         foodtimer = GameObject.FindObjectOfType<TimerScript>();
+        timer.timeLeft = 5;
+        TimerScript.timerRunning = false;
     }
 
 
