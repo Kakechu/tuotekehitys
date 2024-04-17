@@ -54,7 +54,7 @@ public class AnimationScript : MonoBehaviour
                         if (hearts == true)
                         {
                             Debug.Log("HEEEAAAAAARTTSSS!!!");
-                            animalAnim.SetTrigger("TrHeartO");
+                            animalAnim.SetTrigger("TrHeart");
                             hearts = false;
                         }
                         
@@ -62,12 +62,12 @@ public class AnimationScript : MonoBehaviour
                     if (osuttuCollider.CompareTag("Left"))
                     {
                         //charAnim = GetComponent<Animator>();
-                        animalAnim.SetTrigger("TrRO");
+                        animalAnim.SetTrigger("TrR");
                     }
                     if (osuttuCollider.CompareTag("Right"))
                     {
                         //charAnim = GetComponent<Animator>();
-                        animalAnim.SetTrigger("TrLO");
+                        animalAnim.SetTrigger("TrL");
                     }
                     if (osuttuCollider.CompareTag("Feed"))
                     {
@@ -76,7 +76,7 @@ public class AnimationScript : MonoBehaviour
                         {
                             Debug.Log("FOOOOOOOOOOOOD");
                             //charAnim = GetComponent<Animator>();
-                            animalAnim.SetTrigger("TrFoodO");
+                            animalAnim.SetTrigger("TrFood");
                             food = false;
                         }
 
