@@ -332,7 +332,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pay <sprite name="spritesheet_0">500 to unlock next biome
+  m_text: Pay <sprite name="spritesheet_0">500 to unlock this biome
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
   m_sharedMaterial: {fileID: -1196730890217063337, guid: 4056dd40444dfb64ba8a292fdceecf4a, type: 2}
