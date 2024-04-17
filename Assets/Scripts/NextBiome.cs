@@ -35,15 +35,14 @@ public class NextBiome : MonoBehaviour
 
         if (Mathf.Abs(swipeDistance) > swipeThreshold)
         {
+            
+
             if (swipeDistance < 0) // Swipe left
             {
-                ChangeScene();
+                SFXManager.swipeHappened = true;
+                SceneManager.LoadScene("nextBiome");
             }
         }
     }
 
-    void ChangeScene()
-    {
-        SceneManager.LoadScene("nextBiome");
-    }
 }
