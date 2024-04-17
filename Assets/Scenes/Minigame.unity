@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b02e3075a404bb42a1903cce92e6e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 15
+  moveSpeed: 25
   collectCount: 0
   collectibleScoreText: {fileID: 674092494}
   cam: {fileID: 0}
@@ -2088,7 +2088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6239529662238835311, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_GravityScale
-      value: 0.25
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 6575484784565742549, guid: 3a22b4f6be75d474abd7439a3899a255, type: 3}
       propertyPath: m_LocalScale.x
