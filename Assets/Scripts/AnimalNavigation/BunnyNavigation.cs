@@ -37,11 +37,13 @@ public class BunnyNavigation : MonoBehaviour
         {
             if (swipeDistance < 0) // Swipe left (next)
             {
+                SFXManager.swipeHappened = true;
                 SceneManager.LoadScene("hedgehogView");
             }
 
             else if (swipeDistance > 0) // Swipe right (previous)
             {
+                SFXManager.swipeHappened = true;
                 SceneManager.LoadScene("squirrelView");
             }
         }

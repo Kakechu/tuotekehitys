@@ -8,6 +8,7 @@ public class SFXManager : MonoBehaviour
     AudioSource crunchSound;
     AudioSource petSound;
     AudioSource clickSound;
+    AudioSource swipeSound;
 
     // boolean rapsutukselle
     public static bool happyPet = false;
@@ -15,6 +16,8 @@ public class SFXManager : MonoBehaviour
     public static bool goodSoup = false;
     // boolean napin painallukselle
     public static bool clickHappened = false;
+    // boolean swaippaukselle
+    public static bool swipeHappened = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,7 @@ public class SFXManager : MonoBehaviour
         crunchSound = SFXs[0];
         petSound = SFXs[1];
         clickSound = SFXs[2];
+        swipeSound = SFXs[3];
     }
 
     // Update is called once per frame
@@ -49,5 +53,12 @@ public class SFXManager : MonoBehaviour
             clickSound.Play();
             clickHappened = false;
         }
+
+        if (swipeHappened == true)
+        {
+            swipeSound.Play();
+            swipeHappened = false;
+        }
+
     }
 }
