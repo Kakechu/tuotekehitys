@@ -13,6 +13,7 @@ public class HedgehogManager : MonoBehaviour
     public HappinessManager happinessManager;
     public static TimerScript timer;
     public static TimerScript foodtimer;
+    public static AnimationScript animationScript;
     public bool osuttu = false;
     public bool eiosuttu = true;
     public bool ruokaosuttu = false;
@@ -93,6 +94,8 @@ public class HedgehogManager : MonoBehaviour
                 addHappiness(1);
                 // rapsutus‰‰ni
                 SFXManager.happyPet = true;
+                // syd‰nanimaatio
+                AnimationScript.hearts = true;
                 Debug.Log("+1 SIILI");
                 osuttu = false;
                 if (osuttu == false && TimerScript.timerRunning == false)
@@ -120,6 +123,8 @@ public class HedgehogManager : MonoBehaviour
                 addHappiness(3);
                 // rousk ‰‰ni
                 SFXManager.goodSoup = true;
+                // ruoka-animaatio
+                AnimationScript.food = true;
                 Debug.Log("SIILIHAUKS");
                 ruokaosuttu = false;
                 if (ruokaosuttu == false && TimerScript.foodtimerRunning == false)
