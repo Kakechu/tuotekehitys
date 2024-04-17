@@ -28,9 +28,9 @@ public class HedgehogManager : MonoBehaviour
         happinessManager.SetHappiness(currentHedgehogHappiness);
         timer = GameObject.FindObjectOfType<TimerScript>();
         foodtimer = GameObject.FindObjectOfType<TimerScript>();
-        timer.timeLeft = 5;
+        timer.timeLeft = 7;
         TimerScript.timerRunning = false;
-        foodtimer.foodtimeLeft = 5;
+        foodtimer.foodtimeLeft = 7;
         TimerScript.foodtimerRunning = false;
     }
 
@@ -104,7 +104,7 @@ public class HedgehogManager : MonoBehaviour
                     eiosuttu = true;
 
                     // Palautetaan timer alkutilaan
-                    timer.timeLeft = 5;
+                    timer.timeLeft = 7;
                 }
             }
         }
@@ -133,7 +133,7 @@ public class HedgehogManager : MonoBehaviour
                     ruokaeiosuttu = true;
 
                     // Palautetaan timer alkutilaan
-                    foodtimer.foodtimeLeft = 5;
+                    foodtimer.foodtimeLeft = 7;
                 }
             }
         }
