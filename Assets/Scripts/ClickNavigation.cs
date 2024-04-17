@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToAnimal : MonoBehaviour
+public class ClickNavigation : MonoBehaviour
 {
-    public string foxView;
-    public string goatView;
 
     private float touchArea = 0.1f;
 
@@ -30,23 +28,53 @@ public class GoToAnimal : MonoBehaviour
 
                 if (osuttuCollider != null)
                 {
+                    SFXManager.clickHappened = true;
+
                     if (osuttuCollider.CompareTag("Squirrel"))
                     {
-                        //SFXManager.clickHappened = true;
                         SceneManager.LoadScene("squirrelView");
                     }
 
-                    else if (osuttuCollider.CompareTag("Bunny"))
+                    if (osuttuCollider.CompareTag("Bunny"))
                     {
-                        //SFXManager.clickHappened = true;
                         SceneManager.LoadScene("bunnyView");
                     }
 
                     else if (osuttuCollider.CompareTag("Hedgehog"))
                     {
-                        //SFXManager.clickHappened = true;
                         SceneManager.LoadScene("hedgehogView");
                     }
+
+                    else if (osuttuCollider.CompareTag("Shop"))
+                    {
+                        SceneManager.LoadScene("shopScene");
+                    }
+
+                    else if (osuttuCollider.CompareTag("ExitSign"))
+                    {
+                        SceneManager.LoadScene("forestView");
+                    }
+
+                    else if (osuttuCollider.CompareTag("Exit"))
+                    {
+                        SceneManager.LoadScene("Minigame");
+                    }
+
+                    else if (osuttuCollider.CompareTag("ExitToBunny"))
+                    {
+                        SceneManager.LoadScene("MinigameBunny");
+                    }
+
+                    else if (osuttuCollider.CompareTag("ExitToHedgehog"))
+                    {
+                        SceneManager.LoadScene("MinigameHedgehog");
+                    }
+
+                    else if (osuttuCollider.CompareTag("ExitToBiome"))
+                    {
+                        SceneManager.LoadScene("forestView");
+                    }
+
                 }
             }
         }
