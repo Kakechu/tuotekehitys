@@ -4,10 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ExitToMinigame : MonoBehaviour
+public class BiomeNavigation : MonoBehaviour
 {
-    //public string forestScene = "forestView";
-
     private float touchArea = 0.1f;
 
 
@@ -30,29 +28,12 @@ public class ExitToMinigame : MonoBehaviour
 
                 if (osuttuCollider != null)
                 {
-                    if (osuttuCollider.CompareTag("Exit"))
+                    if (osuttuCollider.CompareTag("Shop"))
                     {
                         SFXManager.clickHappened = true;
-                        SceneManager.LoadScene("Minigame");
+                        SceneManager.LoadScene("shopScene");
                     }
 
-                    else if (osuttuCollider.CompareTag("ExitToBunny"))
-                    {
-                        SFXManager.clickHappened = true;
-                        SceneManager.LoadScene("MinigameBunny");
-                    }
-
-                    else if (osuttuCollider.CompareTag("ExitToHedgehog"))
-                    {
-                        SFXManager.clickHappened = true;
-                        SceneManager.LoadScene("MinigameHedgehog");
-                    }
-
-                    else if (osuttuCollider.CompareTag("ExitToBiome"))
-                    {
-                        SFXManager.clickHappened = true;
-                        SceneManager.LoadScene("forestView");
-                    }
 
                 }
             }
