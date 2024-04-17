@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame.unity
     guid: 0c199ff43e7513e4bba7e4da07f54c3b
   - enabled: 1
-    path: Assets/Scenes/nextBiome.unity
+    path: Assets/Scenes/meadowView.unity
     guid: 4735ccd404cce7547b73807b85774d20
   - enabled: 1
     path: Assets/Scenes/hedgehogView.unity
@@ -41,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/shopScene.unity
     guid: d0499241b7229a2478637c373c0cf519
+  - enabled: 1
+    path: Assets/Scenes/winterView.unity
+    guid: f7094984fdc6bc54a8d00b6212e863e9
+  - enabled: 1
+    path: Assets/Scenes/cloudView.unity
+    guid: 1c57b45caab78994b8daf5b1c8c6b654
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: 547277402cb7a7241865fdb556841dfa, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5cec8ad4f14087a4cb6b5356de99ed1b, type: 2}

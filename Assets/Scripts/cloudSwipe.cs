@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextBiome : MonoBehaviour
+public class cloudSwipe : MonoBehaviour
 {
     public float swipeThreshold = 50f;
 
@@ -36,11 +36,12 @@ public class NextBiome : MonoBehaviour
         if (Mathf.Abs(swipeDistance) > swipeThreshold)
         {
             
+            
 
-            if (swipeDistance < 0) // Swipe left
+            if (swipeDistance > 0) // Swipe right (previous biome)
             {
                 SFXManager.swipeHappened = true;
-                SceneManager.LoadScene("meadowView");
+                SceneManager.LoadScene("winterView");
             }
         }
     }
