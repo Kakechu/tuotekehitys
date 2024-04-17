@@ -45,7 +45,9 @@ public class AnimationScript : MonoBehaviour
                 if (osuttuCollider != null)
                 {
                     animalAnim = GetComponent<Animator>();
-                    if (osuttuCollider.CompareTag("SquirrelView")|osuttuCollider.CompareTag("HedgehogView"))
+                    if (osuttuCollider.CompareTag("SquirrelView")
+                       |osuttuCollider.CompareTag("HedgehogView")
+                       |osuttuCollider.CompareTag("BunnyView"))
                     {
                         //charAnim = GetComponent<Animator>();
                         Debug.Log("hearts");
